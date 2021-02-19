@@ -1,0 +1,89 @@
+{% extends 'base1.html' %}
+{% block content %}
+
+{% load static %}
+<div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-interval="10000">
+      <img src={%static "images/image2.jpg" %}  class="d-block w-100" alt="..." style="height:400px;width:200px">
+    </div>
+    
+    <div class="carousel-item" data-interval="2000">
+      <img src= {%static "images/image3.jpg" %} class="d-block w-100" alt="..." style="height:400px;width:200px">
+    </div>
+	<div class="carousel-item" data-interval="2000">
+      <img src={%static "images/image5.jpg" %} class="d-block w-100" alt="..." style="height:400px;width:200px">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div><br>
+
+    
+  
+    <div class="container-fluid p-5" style=" border:1px solid black ; border-radius:5%;background-image:url ('{%static "images/OIP.jpg" %}')  ; background-size:cover; ">
+  <div class="container">
+  <div class="row text-center"> <div class="col-md-12 pb-4 text-success"><h1>Be part of our community to avail the following benefits</h1></div></div>
+  
+  <div class="row text-center p-5">
+    <div class="col-md-6 text-center">
+    <center><h3> <strong>Have access to books of your choice</strong> </h3></center>
+    </div>
+    <div class="col-md-6 text-center">
+    <h3><strong>Comment, review and create your favorites</strong></h3>
+    </div></div>
+    <div class="row text-center">
+    <div class="col-md-6 text-center">
+    <h3><strong>Connect with people of similar book taste</strong></h3>
+    
+    </div>
+    <div class="col-md-6 text-center">
+    <h3><strong>Get the benefit of hardcopies shipped to your homes</strong></h3>
+    
+    </div></div></div></div>
+  
+  <br>
+<div class="container-fluid text-justify bg-light ">
+<div class="container">
+<div class="row pt-4 pb-4">
+<div class="col-6">
+<h4><i class="icofont-ui-call text-success">
+9783366710<br>
++01832553467</i></h4>
+<p>Mon-Sat From 9am-4pm</p>
+<h4><i class="icofont-envelope  text-success">
+choudharyria48@gmail.com<br>
+anmolkhaira327@gmail.com</i></h4>
+<p>Send Us A query Any Time</p>
+<h4><i class="icofont-location-pin  text-success">
+Punjab,India</i></h4>
+<p>SCO-9, B-Block Ranjit Avenue</p>
+</div>
+<div class="col-6">
+<div class="row">
+<div class="col-6">
+<form>
+<input type="text" placeholder="Enter your name" class="form-control" ><br>
+<input type="text" placeholder="Enter email address" class="form-control" ><br>
+<input type="text" placeholder="Enter Subject" class="form-control"><br>
+</form>
+</div>
+<div class="col-6">
+<form>
+<textarea rows="7" cols="52" class="form-control"></textarea><br>
+</form>
+<button  class="btn btn-success" style="float:center">Send Message</button>
+</div>
+</div>
+<br><br>
+</div>
+</div>
+</div>
+</div>
+{% endblock %}
