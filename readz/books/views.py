@@ -13,6 +13,11 @@ from django.http import HttpResponse
 def home(request):
     dict1={}
     return render(request,"homepage.html",context=dict1)
+
+def post_page(request):
+    dict1={}
+    return render(request,"postPage.html",context=dict1)    
+
 def usr_login(request):
     if request.method=="POST":
         username=request.POST.get('username')
@@ -22,7 +27,7 @@ def usr_login(request):
             if user.is_active:
                 login(request,user)
                 args={'user':request.user}
-                return render(request,'homepage.html',args)
+                return render(request,'postPage.html',args)
             else:
                 return HttpResponse("Account is not active")
 
