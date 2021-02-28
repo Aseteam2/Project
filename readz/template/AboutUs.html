@@ -1,0 +1,201 @@
+<html>
+
+<head>
+  <link href="../static/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="icofont\icofont.min.css">
+  <link rel="stylesheet" type="text/css" href="../static/css/">
+  <script src="../static/js/jquery.js"></script>
+  <script src="../static/js/popper.min.js"></script>
+  <script src="../static/js/bootstrap.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+    }
+
+    html {
+      box-sizing: border-box;
+    }
+
+    *,
+    *:before,
+    *:after {
+      box-sizing: border-box;
+    }
+
+    .column {
+      float: left;
+      width: 33.3%;
+      margin-bottom: 16px;
+      padding: 0 8px;
+    }
+
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      margin: 8px;
+      max-width: 70%;
+    }
+
+    .about-section {
+      padding: 70px;
+      text-align: left;
+      background-color: #474e5d;
+      color: white;
+    }
+
+    .container {
+      padding: 0 16px;
+    }
+
+    .container::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    .title {
+      color: grey;
+    }
+
+    .button {
+      border: none;
+      outline: 0;
+      display: inline-block;
+      padding: 8px;
+      color: white;
+      background-color: #000;
+      text-align: center;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .button:hover {
+      background-color: #555;
+    }
+
+    @media screen and (max-width: 650px) {
+      .column {
+        width: 100%;
+        display: block;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-color-app bg-success nav-custom-style">
+    <a class="navbar-brand" href="#"><i class="icofont-read-book-alt icofont-2x"></i>ReadZ</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto nav-menu-list">
+        <li class="nav-item active">
+          <a class="nav-link" href="homepage.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">About</a>
+        </li>
+
+         <li class="nav-item active">
+                    <a class="nav-link" href="login.html">Login / Signup <span class="sr-only">(current)</span></a>
+                </li> 
+
+      </ul>
+  </nav>
+
+  <div class="about-section d-flex">
+
+    <div class="col-md-4 ">
+      <h1>About Us</h1>
+      <p class="pt-4">
+        ReadZ is platform through which people can read and recommend books to other people. People can share books with
+        their friends and family.Our goal is to help you reach out to your desired books with the help of you friends.
+      </p>
+      <p>What we have for you ?</p>
+      <p>Read books and add them your profile for other to view.</p>
+      <p>Comment for a better reach.</p>
+      <p>Indulge in discussions.</p>
+      <p>Don't want to read online, we have got it sorted for you. We will send in books from your friends place to
+        yours.</p>
+    </div>
+    <div class="col-md-3 m-auto">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Help_books.svg" alt="books"/>
+    </div>
+    <div class="col-md-5">
+      <h1>Our Mission and Vision</h1>
+      <p class="pt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores hic accusantium magnam eveniet. Nemo, nesciunt necessitatibus? Inventore doloremque, libero aperiam, quo debitis voluptatibus modi, sapiente porro eaque iure nesciunt illum.</p>
+     
+    </div>
+  </div>
+
+  <div class="p-5 text-center">
+    <h2 style="text-align:center">Our Team</h2>
+  </div>
+    <div class="column">
+      <div class="card">
+        <img src="../media/dummy.jpg" alt="Anmoldeep" style="width:100%">
+        <div class="container p-4">
+          <h2>Anmoldeep Kaur</h2>
+          <p class="title">Founder</p>
+          <p>anmol@example.com</p>
+          <p><a class="button" href="mailto:anmol@example.com">Contact</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="card">
+        <img src="../media/dummy.jpg" alt="Vivek" style="width:100%">
+        <div class="container p-4">
+          <h2>Vivek</h2>
+          <p class="title">Director</p>
+          <p>vivek@example.com</p>
+          <p><a class="button" href="mailto:anmol@example.com">Contact</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="card">
+        <img src="../media/dummy.jpg" alt="Ragini">
+        <div class="container p-4">
+          <h2>Ragini</h2>
+          <p class="title">Designer</p>
+          <p>ragini@example.com</p>
+          <p><a class="button" href="mailto:anmol@example.com">Contact</a></p>
+        </div>
+      </div>
+    </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="../media/dummy.jpg" alt="Satwinder" style="width:100%">
+      <div class="container p-4">
+        <h2>Satwinder</h2>
+        <p class="title">UI/UX Designer</p>
+        <p>satwinder@example.com</p>
+        <p><a class="button" href="mailto:anmol@example.com">Contact</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card" styles="border-radius: 20px;">
+      <img src="../media/dummy.jpg" alt="Prabjot" style="width:100%">
+      <div class="container p-4">
+        <h2>Prabjot</h2>
+        <p class="title">Database Manager</p>
+        <p>prab@example.com</p>
+        <p><a class="button" href="mailto:anmol@example.com">Contact</a></p>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
+
+
