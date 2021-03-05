@@ -56,13 +56,28 @@
       <div class="col-md-5 pt-3 pb-3 " style="border:1px solid black ; border-radius:5% ">
       <form method="post">
         {% csrf_token %}
-        {{ user_form.errors }}
+        <!-- {{ user_form.errors }} -->
+        {% if user_form.errors %}
+            {% for field in user_form %}
+              {% for error in field.errors %}
+                  <div class="alert alert-danger">
+                      <strong>{{ error|escape }}</strong>
+                  </div>
+              {% endfor %}
+            {% endfor %}
+            {% for error in user_form.non_field_errors %}
+                <div class="alert alert-danger">
+                    <strong>{{ error|escape }}</strong>
+                </div>
+            {% endfor %}
+        {% endif %}
         {{ user_form.username|as_crispy_field}}<br>
         {{ user_form.email|as_crispy_field }}<br>
         {{ user_form.password|as_crispy_field }}<br>
+        {{ user_form.confirm_password|as_crispy_field }}<br>
       
-      Confirm Password*
-      <input type="password" class="form-control"required="required"><br>
+      <!-- Confirm Password*
+      <input type="password" class="form-control"required="required"><br> -->
       <button class="btn btn-primary">Submit</button>
       <br><br>Already have an account? <a href="/login">sign in here</a> 
       </form>
