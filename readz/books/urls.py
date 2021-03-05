@@ -21,4 +21,10 @@ urlpatterns = [
    path('', views.usr_login, name = 'login'),
    path('', views.register, name = 'register'),
    path('', views.post_page, name = 'post_page'),
+   path('', views.profile_page, name = 'profile_page'),
+   path('', views.user_logout, name = 'user_logout'),
+   path('', views.about, name = 'about'),
+   path('', views.horror, name = 'horror'),
+
+
 ]

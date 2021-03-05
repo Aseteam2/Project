@@ -1,14 +1,27 @@
-<html>
 
+    <html>
+        {% load static %}
 <head>
-    <link href="css\bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="icofont\icofont.min.css">
-    <link rel="stylesheet" type="text/css" href=".\css\styles.css">
-    <script src="js\jquery.js"></script>
-    <script src="js\popper.min.js"></script>
-    <script src="js\bootstrap.min.js"></script>
-</head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="{%static "css\bootstrap.min.css" %}" rel="stylesheet"/>
+<link rel="stylesheet" href="{%static "css\sidebar\style.default.css" %}">
+<link rel="shortcut icon" href="{%static "favicon.png" %}">
+<link rel="stylesheet" type="text/css" href="{%static "icofont\icofont.min.css" %}">
+<script src="{%static "js\jquery.js" %}"></script>
+<script src="{%static "js\popper.min.js" %}"></script>
+<script src="{%static "js\bootstrap.min.js" %}"></script>
+<!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="{%static "css\style.css" %} ">
 
+    <!-- Font Awesome JS -->
+    <script defer src="http
+    s://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+</head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-color-app bg-success nav-custom-style">
         <a class="navbar-brand" href="#"><i class="icofont-read-book-alt icofont-2x"></i>ReadZ</a>
@@ -19,15 +32,15 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto nav-menu-list">
                 <li class="nav-item active">
-                    <a class="nav-link" href="homepage.html">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="/about">About</a>
                 </li>
-
-                <!-- <li class="nav-item active">
-                    <a class="nav-link" href="login.html">Login / Signup <span class="sr-only">(current)</span></a>
-                </li> -->
+                <li class="nav-item active">
+                    <a class="nav-link" href="/login">Login/signup</a>
+                </li>
+                
 
             </ul>
     </nav>
@@ -43,7 +56,7 @@
             <div class="row p-5">
                <div class="col-md-3 col-xs-12 col-sm-6  col-lg-2  col-xl-2  container text-center">
                      <a href="./ebook.pdf" target="_blank">
-                        <img src="images/TinyNightmares.jpg" class="img-thumbnail" alt="Cinque Terre" width="304"
+                        <img src={%static "images/TinyNightmares.jpg" %} class="img-thumbnail" alt="Cinque Terre" width="304"
                         height="236">
                     </a>
                     <div class="card-body">
@@ -55,7 +68,7 @@
                 
                 <div class="col-md-3 col-xs-12 col-sm-6  col-lg-2  col-xl-2  container text-center">
                     <a href="./ebook.pdf" target="_blank">
-                        <img src="images/Claw.jpg" class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
+                        <img src={%static "images/Claw.jpg" %} class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
                     </a>
                     <div class="card-body">
                         <h3><strong>Claw</strong></h3>
@@ -65,7 +78,7 @@
                 </div>
                 <div class="col-md-3 col-xs-12 col-sm-6  col-lg-2  col-xl-2  container text-center">
                     <a href="./ebook.pdf" target="_blank">
-                        <img src="images/FantasticLand.jpg" class="img-thumbnail" alt="Cinque Terre" width="304"
+                        <img src={%static "images/FantasticLand.jpg" %}class="img-thumbnail" alt="Cinque Terre" width="304"
                         height="236">
                     </a>
                     <div class="card-body">
@@ -76,7 +89,7 @@
                 </div>
                 <div class="col-md-3 col-xs-12 col-sm-6  col-lg-2  col-xl-2  container text-center">
                     <a href="./ebook.pdf" target="_blank">
-                        <img src="images/Intercepts.jpg" class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
+                        <img src={%static "images/Intercepts.jpg" %} class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
                     </a>
                     <div class="card-body">
                         <h3><strong>Intercepts</strong></h3>
@@ -87,7 +100,7 @@
 
                 <div class="col-md-3 col-xs-12 col-sm-6  col-lg-2  col-xl-2  container text-center">
                     <a href="./ebook.pdf" target="_blank">
-                        <img src="images/Passive.jpg" class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
+                        <img src={%static "images/Passive.jpg" %} class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
                     </a>
                     <div class="card-body">
                         <h3><strong>Passive</strong></h3>
@@ -97,7 +110,7 @@
                 </div>
                 <div class="col-md-3 col-xs-12 col-sm-6  col-lg-2  col-xl-2  container text-center">
                     <a href="./ebook.pdf" target="_blank">
-                        <img src="images/Deadly.jpg" class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
+                        <img src={%static "images/Deadly.jpg" %}class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
                     </a>
                     <div class="card-body">
                         <h3><strong>Deadly</strong></h3>
@@ -107,7 +120,7 @@
                 </div>
                 <div class="col-md-3 col-xs-12 col-sm-6  col-lg-2  col-xl-2  container text-center">
                     <a href="./ebook.pdf" target="_blank">
-                        <img src="images/SecretSanta.jpg" class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
+                        <img src={%static "images/SecretSanta.jpg" %} class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
                     </a>
                     <div class="card-body">
                         <h3><strong>Secret Santa</strong></h3>
@@ -117,7 +130,7 @@
                 </div>
                 <div class="col-md-3 col-xs-12 col-sm-6  col-lg-2  col-xl-2  container text-center">
                     <a href="./ebook.pdf" target="_blank">
-                        <img src="images/Lore.jpg" class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
+                        <img src={%static "images/Lore.jpg" %} class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
                     </a>
                     <div class="card-body">
                         <h3><strong>Lore</strong></h3>
@@ -128,7 +141,7 @@
 
                 <div class="col-md-3 col-xs-12 col-sm-6  col-lg-2  col-xl-2  container text-center">
                     <a href="./ebook.pdf" target="_blank">
-                        <img src="images/CellarDoor.jpg" class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
+                        <img src={%static "images/CellarDoor.jpg" %} class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
                     </a>
                     <div class="card-body">
                         <h3><strong>Cellar Door</strong></h3>
@@ -138,7 +151,7 @@
                 </div>
                 <div class="col-md-3 col-xs-12 col-sm-6  col-lg-2  col-xl-2  container text-center">
                     <a href="./ebook.pdf" target="_blank">
-                        <img src="images/TheFourWindsANovel.jpg" class="img-thumbnail" alt="Cinque Terre" width="304"
+                        <img src={%static "images/TheFourWindsANovel.jpg" %} class="img-thumbnail" alt="Cinque Terre" width="304"
                         height="236">
                     </a>
                     <div class="card-body">
@@ -149,7 +162,7 @@
                 </div>
                 <div class="col-md-3 col-xs-12 col-sm-6  col-lg-2  col-xl-2  container text-center">
                     <a href="./ebook.pdf" target="_blank">
-                        <img src="images/TheMidnightLibrary.jpg" class="img-thumbnail" alt="Cinque Terre" width="304"
+                        <img src={%static "images/TheMidnightLibrary.jpg" %} class="img-thumbnail" alt="Cinque Terre" width="304"
                         height="236">
                     </a>
                     <div class="card-body">
@@ -160,7 +173,7 @@
                 </div>
                 <div class="col-md-3 col-xs-12 col-sm-6  col-lg-2  col-xl-2  container text-center">
                     <a href="./ebook.pdf" target="_blank">
-                        <img src="images/TheConjurer.jpg" class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
+                        <img src={%static "images/TheConjurer.jpg" %}class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
                     </a>
                     <div class="card-body">
                         <h3><strong>The Conjurer</strong></h3>

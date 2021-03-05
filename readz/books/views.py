@@ -18,6 +18,23 @@ def post_page(request):
     dict1={}
     return render(request,"postPage.html",context=dict1)    
 
+def about(request):
+    dict1={}
+    return render(request,"AboutUs.html",context=dict1)    
+
+def profile_page(request):
+    dict1={}
+    return render(request,"Profile.html",context=dict1)    
+
+def horror(request):
+    dict1={}
+    return render(request,"HorrorbookList.html",context=dict1)    
+
+
+def user_logout(request):
+    dict1={}
+    return render(request,"homepage.html",context=dict1)   
+    
 def usr_login(request):
     if request.method=="POST":
         username=request.POST.get('username')

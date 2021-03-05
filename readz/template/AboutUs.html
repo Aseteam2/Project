@@ -1,89 +1,31 @@
-<html>
 
+
+  <html>
+    {% load static %}
 <head>
-  <link href="../static/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" type="text/css" href="icofont\icofont.min.css">
-  <link rel="stylesheet" type="text/css" href="../static/css/">
-  <script src="../static/js/jquery.js"></script>
-  <script src="../static/js/popper.min.js"></script>
-  <script src="../static/js/bootstrap.min.js"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      margin: 0;
-    }
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="{%static "css\bootstrap.min.css" %}" rel="stylesheet"/>
+<link rel="stylesheet" href="{%static "css\sidebar\style.default.css" %}">
+<link rel="shortcut icon" href="{%static "favicon.png" %}">
+<link rel="stylesheet" type="text/css" href="{%static "icofont\icofont.min.css" %}">
+<script src="{%static "js\jquery.js" %}"></script>
+<script src="{%static "js\popper.min.js" %}"></script>
+<script src="{%static "js\bootstrap.min.js" %}"></script>
+<!-- Bootstrap CSS CDN -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+<!-- Our Custom CSS -->
+<link rel="stylesheet" href="{%static "css\style.css" %} ">
 
-    html {
-      box-sizing: border-box;
-    }
+<!-- Font Awesome JS -->
+<script defer src="http
+s://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
 
-    *,
-    *:before,
-    *:after {
-      box-sizing: border-box;
-    }
-
-    .column {
-      float: left;
-      width: 33.3%;
-      margin-bottom: 16px;
-      padding: 0 8px;
-    }
-
-    .card {
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-      margin: 8px;
-      max-width: 70%;
-    }
-
-    .about-section {
-      padding: 35px;
-      text-align: left;
-      background-color: #474e5d;
-      color: white;
-    }
-
-    .container {
-      padding: 0 14px;
-    }
-
-    .container::after {
-      content: "";
-      clear: both;
-      display: table;
-    }
-
-    .title {
-      color: grey;
-    }
-
-    .button {
-      border: none;
-      outline: 0;
-      display: inline-block;
-      padding: 8px;
-      color: white;
-      background-color: #000;
-      text-align: center;
-      cursor: pointer;
-      width: 100%;
-    }
-
-    .button:hover {
-      background-color: #555;
-    }
-
-    @media screen and (max-width: 650px) {
-      .column {
-        width: 100%;
-        display: block;
-      }
-    }
-  </style>
 </head>
 
-<body>
+<body bgcolor="SlateBlue">
   <nav class="navbar navbar-expand-lg navbar-dark bg-color-app bg-success nav-custom-style">
     <a class="navbar-brand" href="#"><i class="icofont-read-book-alt icofont-2x"></i>ReadZ</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -93,20 +35,17 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto nav-menu-list">
         <li class="nav-item active">
-          <a class="nav-link" href="homepage.html">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="#">About</a>
-        </li>
-
+        
          <li class="nav-item active">
-                    <a class="nav-link" href="login.html">Login / Signup <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/login">Login / Signup <span class="sr-only">(current)</span></a>
                 </li> 
 
       </ul>
   </nav>
 
-  <div class="about-section d-flex">
+  <div class="about-section d-flex bg-info">
 
     <div class="col-md-4 ">
       <h1>About Us</h1>

@@ -1,26 +1,41 @@
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<html>
+        {% load static %}
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="{%static "css\bootstrap.min.css" %}" rel="stylesheet"/>
+<link rel="stylesheet" href="{%static "css\sidebar\style.default.css" %}">
+<link rel="shortcut icon" href="{%static "favicon.png" %}">
+<link rel="stylesheet" type="text/css" href="{%static "icofont\icofont.min.css" %}">
+<script src="{%static "js\jquery.js" %}"></script>
+<script src="{%static "js\popper.min.js" %}"></script>
+<script src="{%static "js\bootstrap.min.js" %}"></script>
+<!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="{%static "css\style.css" %} ">
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-
-<!-- <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
-<!------ Include the above in your HEAD tag ---------->
-
-<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
-        crossorigin="anonymous">
-        
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>  
+    <!-- Font Awesome JS -->
+    <script defer src="http
+    s://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+</head>
   
-        <div>
-            <nav class="navbar navbar-light bg-success">
-                <a href="#" class="navbar-brand mx-4">Readz</a> 
-            </nav>
-        </div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <a class="navbar-brand" href="#"><i class="icofont-read-book-alt icofont-2x"></i>ReadZ</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+    
+    <li class="nav-item active">
+    <a class="nav-link" href="/logout">Logout <span class="sr-only">(current)</span></a>
+    </li>
+    
+    </ul>
+    </nav>
 
 
 
@@ -32,12 +47,11 @@
                         <div class="mr-2">
                             <img class="rounded-circle" width="100" src="https://picsum.photos/50/50" alt="">
                         </div>
-                        <div class="h5">@ {{expert.username}} </div>
-                        <div class="h7 text-muted"> {{user.username}}</div>
-                        <div class="h7">Interested in Comic, horror and story books
-                        </div>
+                        <div class="h5">@ {{user.username}} </div>
+                       
+                        
                         <div class="mt-3">
-                          <button type="button" class="btn btn-primary">View Profile</button>  
+                          <a href="/profile">View Profile</a>  
                         </div>
                     </div>
                    
@@ -50,12 +64,9 @@
                     <div class="card-header">
                         <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
                             <li class="nav-item">
-                                <a class="nav-link active" id="posts-tab" data-toggle="tab" href="#posts" role="tab" aria-controls="posts" aria-selected="true">Make
-                                    a publication</a>
+                                <a class="nav-link active" id="posts-tab" data-toggle="tab" href="#posts" role="tab" aria-controls="posts" aria-selected="true">Leave a comment</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="images-tab" data-toggle="tab" role="tab" aria-controls="images" aria-selected="false" href="#images">Images</a>
-                            </li>
+                            
                         </ul>
                     </div>
                     <div class="card-body">
@@ -79,7 +90,7 @@
                         </div>
                         <div class="btn-toolbar justify-content-between">
                             <div class="btn-group">
-                                <button type="submit" class="btn btn-primary mt-3">share</button>
+                                <button type="submit" class="btn btn-success mt-3">share</button>
                             </div>
                           
                         </div>
@@ -96,22 +107,22 @@
                                     <img class="rounded-circle" width="45" src="https://picsum.photos/50/50" alt="">
                                 </div>
                                 <div class="ml-2">
-                                    <div class="h5 m-0">@username</div>
-                                    <div class="h7 text-muted">Miracles Lee Cross</div>
+                                    <div class="h5 m-0">@{{ user.username }}</div>
+                                    
                                 </div>
                             </div>
                         </div>
 
                     </div>
                     <div class="card-body">
-                        <div class="text-muted h7 mb-2">
+                        
                         <a class="card-link" href="#">
-                            <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adip.</h5>
+                            <h5 class="card-title"> Beautiful </h5>
+							
                         </a>
 
                         <p class="card-text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo recusandae nulla rem eos ipsa praesentium esse magnam nemo dolor
-                            sequi fuga quia quaerat cum, obcaecati hic, molestias minima iste voluptates.
+                            It was a pleasure to read about goodness, simple friendship, acceptance and hope. The drawings are beautiful too. I am going to find my fox, mole and horse now.
                         </p>
                     </div>
                     <div class="card-footer">
@@ -135,7 +146,7 @@
                 </div>
                 <!-- Post /////-->
 
-                </div>
+                
                 <!--- \\\\\\\Post-->
                 <div class="card gedf-card">
                     <div class="card-header">
@@ -145,8 +156,8 @@
                                     <img class="rounded-circle" width="45" src="https://picsum.photos/50/50" alt="">
                                 </div>
                                 <div class="ml-2">
-                                    <div class="h5 m-0">@User name</div>
-                                    <div class="h7 text-muted">Miracles Lee Cross</div>
+                                    <div class="h5 m-0">@Ragini</div>
+                                    
                                 </div>
                             </div>  
                         </div>
@@ -154,12 +165,12 @@
                     </div>
                     <div class="card-body">
                         <a class="card-link" href="#">
-                            <h5 class="card-title"> Lorem ipsum dolor sit amet consectetur adipisicing elit..</h5>
+                            <h5 class="card-title">  The Boy, the Mole, the Fox and the Horse = Bliss!</h5>
                         </a>
 
                         <p class="card-text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam omnis nihil, aliquam est, voluptates officiis iure soluta
-                            alias vel odit, placeat reiciendis ut libero! Quas aliquid natus cumque quae repellendus. Lorem
+                            Charlie Mackesy's book is pure joy!! I read through it the day it arrived & I can already tell I will reread it over & over . . . hopefully, a few of those times will be with tea & cake. 😉
+While reading it, I go back & forth between wanting to be still & sit in the quiet and wanting to get my sketch book & create in a flurry with pen & paint!! Love this book SO many . . . it's bound to be a classic for both children & adults alike not only for his artistic ability; but because he writes truth that every heart knows but that we have all too often forgotten!
                            
                         </p>
                     </div>
@@ -193,21 +204,21 @@
                                     <img class="rounded-circle" width="45" src="https://picsum.photos/50/50" alt="">
                                 </div>
                                 <div class="ml-2">
-                                    <div class="h5 m-0">@Username</div>
-                                    <div class="h7 text-muted">Miracles Lee Cross</div>
+                                    <div class="h5 m-0">@Anmol</div>
+                                   
                                 </div>
                             </div>
                         </div>
 
                     </div>
                     <div class="card-body">
-                        <div class="text-muted h7 mb-2"> <i class="fa fa-clock-o"></i> Hace 40 min</div>
+                        
                         <a class="card-link" href="#">
-                            <h5 class="card-title">Totam non adipisci hic!</h5>
+                            <h5 class="card-title"> So beautiful...</h5>
                         </a>
 
                         <p class="card-text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam sunt fugit reprehenderit consectetur exercitationem odio.
+                            This book is beautiful. I highly recommend. I can open to any random page and find encouragement. Mr. Mackesy, may you become a household name.
                         </p>
                     </div>
                     <div class="card-footer">
