@@ -1,179 +1,162 @@
-<html>
-        {% load static %}
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<link href="{%static "css\bootstrap.min.css" %}" rel="stylesheet"/>
-<link rel="stylesheet" href="{%static "css\sidebar\style.default.css" %}">
-<link rel="shortcut icon" href="{%static "favicon.png" %}">
-<link rel="stylesheet" type="text/css" href="{%static "icofont\icofont.min.css" %}">
-<script src="{%static "js\jquery.js" %}"></script>
-<script src="{%static "js\popper.min.js" %}"></script>
-<script src="{%static "js\bootstrap.min.js" %}"></script>
-<!-- Bootstrap CSS CDN -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <!-- Our Custom CSS -->
-    <link rel="stylesheet" href="{%static "css\style.css" %} ">
-
-    <!-- Font Awesome JS -->
-    <script defer src="http
-    s://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
-</head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
-    <a class="navbar-brand" href="#"><i class="icofont-read-book-alt icofont-2x"></i>ReadZ</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav ml-auto">
-    <li class="nav-item active">
-    <a class="nav-link" href="/home">LIBRARY <span class="sr-only">(current)</span></a>
-    </li>
-    <li class="nav-item active">
-    <a class="nav-link" href="#">ABOUT</a>
-    </li>
-    <li class="nav-item active">
-    <a class="nav-link" href="/logout">LOGOUT <span class="sr-only">(current)</span></a>
-    </li>
-    
-    </ul>
-    </nav>
-    <div class="container-fluid">
-        <div class="row text-center">
-        
+    <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Library</title>
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="../static/css/styles.css" rel="stylesheet">
+        <!-- Fonts CSS-->
+        <link rel="stylesheet" href="../static/css/heading.css">
+        <link rel="stylesheet" href="../static/css/body.css">
+    </head>
+    <body id="page-top">
+        <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <link href="{%static "css\bootstrap.min.css" %}" rel="stylesheet"/>
+            <link rel="stylesheet" href="{%static "css\sidebar\style.default.css" %}">
+            <link rel="shortcut icon" href="{%static "favicon.png" %}">
+            <link rel="stylesheet" type="text/css" href="{%static "icofont\icofont.min.css" %}">
+            <script src="{%static "js\jquery.js" %}"></script>
+            <script src="{%static "js\popper.min.js" %}"></script>
+            <script src="{%static "js\bootstrap.min.js" %}"></script>
+            <!-- Bootstrap CSS CDN -->
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+                <!-- Our Custom CSS -->
+                <link rel="stylesheet" href="{%static "css\style.css" %} ">
             
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <img class="img-fluid" src={%static "images/pexels-suzy-hazelwood-1887609.jpg" %} alt="Romantic books"/>
-                        </div>
-                    <div class="col-md-6 col-lg-4 mb-5">
-                       <img class="img-fluid" src={%static "images/portfolio/pexels-polina-zimmerman-3747163.jpg" %} alt="Adventure books"/>
-                        </div>
-                    </div>
-                    <div class="row text-center">
-                    <div class="col-md-6 col-lg-4 mb-5">
-                    <img class="img-fluid" src={%static "images/portfolio/pexels-thought-catalog-904620.jpg" %}alt="Thrillerbooks"/>
-                        </div>
-                    </div>
-                
+                <!-- Font Awesome JS -->
+                <script defer src="http
+                s://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+                <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+            </head>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-color-app bg-success nav-custom-style">
+                <a class="navbar-brand" href="#"><i class="icofont-read-book-alt icofont-2x"></i>ReadZ</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-auto nav-menu-list">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="/about">About</a>
+                    </li>
+                     <li class="nav-item active">
+                                <a class="nav-link" href="/logout">Logout <span class="sr-only">(current)</span></a>
+                            </li> 
             
+                  </ul>
+              </nav>
+    </body>
+        <header class="masthead bg-secondary text-white text-center">
+            <div class="container d-flex align-items-center flex-column">
         
-        <!-- Portfolio Modal-->
-        
-                            <div class="row text-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary mb-0">horror Books</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">New Image Description</p>
-                                    <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
-                                </div>
-                            </div>
-                        
-        
-        
-                            <div class="row text-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary mb-0">Romantic books</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src={%static "images/pexels-suzy-hazelwood-1887609.jpg" %} alt="Romantic books"/>
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5"></p>
-                                    <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
-                                </div>
-                            </div>
-                        
-        
-                    
-                            <div class="row text-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary mb-0">Adventure books</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src={%static "images/pexels-polina-zimmerman-3747163.jpg" %} alt="Adventure books"/>
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5"></p>
-                                    <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
-                                </div>
-                            </div>
-                        
-                   
-                
-        
-                        
-                            <div class="row text-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary mb-0">Thrillerbooks</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src={%static "images/pexels-thought-catalog-904620.jpg" %} alt="Thrillerbooks"/>
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5"></p>
-                                    <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
-                                </div>
-                            </div>
-                            
-                    
-                    
-        
-           
-                <!-- About Section Heading-->
-                <div class="row text-center">
-                    <h2 class="page-section-heading d-inline-block text-white">ABOUT</h2>
-                
+                <!-- Masthead Heading-->
+                <h1 class="masthead-heading mb-0">ReadZ</h1>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
                 </div>
-                    <div class="col-lg-4 ml-auto">
-                        <p class="pre-wrap lead"> ReadZ is a social application, where people can read different genre books. They have to make user account and then they can read and share different books with other user.</p>
+                <!-- Masthead Subheading-->
+                <p class="pre-wrap masthead-subheading font-weight-light mb-0">Train your mind by reading books </p>
+            </div>
+        </header>
+        <section class="page-section portfolio" id="portfolio">
+            <div class="container">
+                <!-- Portfolio Section Heading-->
+                <div class="text-center">
+                    <h2 class="page-section-heading text-secondary mb-0 d-inline-block">LIBRARY</h2>
+                </div>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Portfolio Grid Items-->
+                <div class="row justify-content-center">
+                
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
+
+                            <a href="Travelbooklist.html">
+                            <img class="img-fluid" src="../static/images/pexels-suzy-hazelwood-1887609.jpg" alt="Romantic books"/>
+                            </a>
+                        </div>
                     </div>
-                    <div class="col-lg-4 mr-auto">
-                        <p class="pre-wrap lead">The main goal of this application is to track how recommendation of books from one user to other spreads across the internet.</p>
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
+                            <a href="romancebookList.html">
+                            <img class="img-fluid" src="../static/images/pexels-polina-zimmerman-3747163.jpg" alt="Adventure books"/>
+                            </a>
+                        </div>
                     </div>
-               
-           
-       
-            
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3">
+                            <a href="MysterybookList.html">
+                            <img class="img-fluid" src="../static/images/pexels-thought-catalog-904620.jpg" alt="Thrillerbooks"/>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
+                            <a href="horrorbookList.html">
+                            <img class="img-fluid" src="../static/images/pexels-suzy-hazelwood-1887609.jpg" alt="Romantic books"/>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
+                            <a href="Travelbooklist.html">
+                            <img class="img-fluid" src="../static/images/pexels-polina-zimmerman-3747163.jpg" alt="Adventure books"/>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3">
+                            <img class="img-fluid" src="../static/images/pexels-thought-catalog-904620.jpg" alt="Thrillerbooks"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section class="page-section" id="contact">
+            <div class="container">
                 <!-- Contact Section Heading-->
-                <div class="row text-center">
-                    <div class="col-md-12">
+                <div class="text-center">
                     <h2 class="page-section-heading text-secondary d-inline-block mb-0">CONTACT</h2>
                 </div>
-                
-                
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
                 </div>
                 <!-- Contact Section Content-->
-                <div class="row text-center">
-                    <div class="col-md-4">
+                <div class="row justify-content-center">
+                    <div class="col-lg-4">
                         <div class="d-flex flex-column align-items-center">
                             <div class="icon-contact mb-3"><i class="fas fa-mobile-alt"></i></div>
                             <div class="text-muted">Phone</div>
                             <div class="lead font-weight-bold">(647) 563 8001</div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-lg-4">
                         <div class="d-flex flex-column align-items-center">
                             <div class="icon-contact mb-3"><i class="far fa-envelope"></i></div>
                             <div class="text-muted">Email</div><a class="lead font-weight-bold" href="mailto:singh49@uwindsor.ca">singh49@uwindsor.ca</a>
@@ -181,7 +164,7 @@
                     </div>
                 </div>
             </div>
-        
+        </section>
         <footer class="footer text-center">
             <div class="container">
                 <div class="row">
@@ -203,7 +186,7 @@ M1N 3X9</p>
                 </div>
             </div>
         </footer>
-        <!-- Copyright Section-->cd 
+        <!-- Copyright Section-->
         <section class="copyright py-4 text-center text-white">
             <div class="container"><small class="pre-wrap">Copyright © READZ 2020 </small></div>
         </section>
