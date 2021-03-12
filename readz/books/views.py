@@ -8,15 +8,36 @@ from django.conf import settings
 from . import forms
 from datetime import datetime
 from django.http import HttpResponse
+from .forms import postform
+from django.views.generic import CreateView
+from books.models import posts
+
+ 
 
 # Create your views here.
 def home(request):
     dict1={}
     return render(request,"homepage.html",context=dict1)
 
-def post_page(request):
+def index(request):
     dict1={}
-    return render(request,"postPage.html",context=dict1)    
+    return render(request,"index.html",context=dict1)    
+
+
+   
+def post_page1(request):
+  if request.method == "POST":
+    form = postform(request.POST)
+    if form.is_valid():
+      form.save()
+  else:
+      form = postform()
+  return render(request, 'postPage.html', {'form': form}) 
+
+def post_page(request):
+    pos=posts.objects.all()
+    
+    return render(request,"postPage.html",{'pos':pos})  
 
 def about(request):
     dict1={}
@@ -71,3 +92,7 @@ def register(request):
     else: 
         user_form=UserForm()        
     return render(request,"register.html",{'user_form':user_form,registered:'registered'})
+
+
+
+    

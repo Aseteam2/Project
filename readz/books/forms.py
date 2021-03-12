@@ -1,4 +1,5 @@
 from django import forms
+from .models import posts
 from django.db import models
 from django.contrib.auth.models import User
 from django.core.validators import RegexValidator
@@ -23,3 +24,9 @@ class UserForm(forms.ModelForm):
             raise forms.ValidationError(
                 "password and confirm_password does not match"
             )
+
+class postform(forms.ModelForm):
+  class Meta:
+    model = posts
+    fields = ["Comment"]
+    labels = {'Comment': "Comment"}
