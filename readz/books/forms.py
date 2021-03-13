@@ -28,5 +28,5 @@ class UserForm(forms.ModelForm):
 class postform(forms.ModelForm):
   class Meta:
     model = posts
-    fields = ["Comment"]
-    labels = {'Comment': "Comment"}
+    fields = ["Comment","Name"]
+    labels = {'Comment': "Comment",'Name':"Name"}

@@ -130,10 +130,14 @@
                             <div class="container">
                                 <form method="POST" action="/post_page1/">
                                     <fieldset class="form-group border p-3">
-                                        <legend class="w-auto px-2">Comment Here</legend>
+                                        <legend class="w-auto px-2">Create Post Here</legend>
                                         <div class="form-group">
                                             <label for="Comment">Comment:</label>
                                             <input type="text" class="form-control Comment" id="Comment" placeholder="type..." name="Comment">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="Name">Name:</label>
+                                            <input type="text" class="form-control Comment" id="name" placeholder="type..." name="name" >
                                         </div>
                                     {% csrf_token %}
                                     
@@ -145,41 +149,18 @@
                         </div>
                     </div>
                                 </form>
+                                <a href="/posts1">Check out all posts here</a>
+                            </div>
                             </div>
                               
                         
-                        
+                                
                 
             <!-- Post /////-->
+            
+            
 
             <!--- \\\\\\\Post-->
-            <div class="row">
-                {% for us in pos %}
-                {% if forloop.counter0|divisibleby:3 %}
-                </div><br>
-                <div class="row">
-                {% endif %}
-                <div class="col-4">
-                <div class="card" style="width:18rem; height:33rem ;">
-                <img class="card-img-top" src="{{ us.photo.url }}" width="230" height="250" alt="not available">
-                <div class="card-body">
-                <div class="row p-2">
-                <div class="col-12">
-                <h5 class="card-title "> {{ us.Comment }} </h5>
-                </div>
-                </div>
-                <div class="rowp-2">
-                <div class="col-12">
-                <p class="card-text ">
-                {{ us.city}}<br>
-                {{ us.address }}
-                </p>
-                </div>
-                </div>
-                </div>
-                </div>
-                </div>
-                {% endfor %}
-                </div>
+            
     </div>
 </div>
