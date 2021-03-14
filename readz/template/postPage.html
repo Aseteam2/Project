@@ -126,221 +126,41 @@
         <div class="col-md-6 gedf-main">
 
             <!--- \\\\\\\Post-->
-            <div class="card gedf-card">
-                <div class="card-header">
-                    <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
-                        <li class="nav-item">
-                            <a class="nav-link active" id="posts-tab" data-toggle="tab" href="#posts" role="tab"
-                                aria-controls="posts" aria-selected="true">Leave a comment</a>
-                        </li>
-
-                    </ul>
-                </div>
-                <div class="card-body">
-                    <div class="tab-content" id="myTabContent">
-                        <div class="tab-pane fade show active" id="posts" role="tabpanel" aria-labelledby="posts-tab">
-                            <div class="form-group">
-                                <label class="sr-only" for="message">post</label>
-                                <textarea class="form-control" id="message" rows="3"
-                                    placeholder="What are you thinking?"></textarea>
-                            </div>
-
-                        </div>
-                        <div class="tab-pane fade" id="images" role="tabpanel" aria-labelledby="images-tab">
-                            <div class="form-group">
-                                <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="customFile">
-                                    <label class="custom-file-label" for="customFile">Upload image</label>
-                                </div>
-                            </div>
-                            <div class="py-4"></div>
+            
+                            <div class="container">
+                                <form method="POST" action="/post_page1/">
+                                    <fieldset class="form-group border p-3">
+                                        <legend class="w-auto px-2">Create Post Here</legend>
+                                        <div class="form-group">
+                                            <label for="Comment">Comment:</label>
+                                            <input type="text" class="form-control Comment" id="Comment" placeholder="type..." name="Comment">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="Name">Name:</label>
+                                            <input type="text" class="form-control Comment" id="name" placeholder="type..." name="name" >
+                                        </div>
+                                    {% csrf_token %}
+                                    
+                                    
+                                  </fieldset>
+                                  <div class="form-group row text-right">
+                        <div class="col">
+                            <button type="submit" class="btn btn-primary btn-customized">Submit</button>
                         </div>
                     </div>
-                    <div class="btn-toolbar justify-content-between">
-                        <div class="btn-group">
-                            <button type="submit" class="btn btn-success mt-3">share</button>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
+                                </form>
+                                <a href="/posts1">Check out all posts here</a>
+                            </div>
+                            </div>
+                              
+                        
+                                
+                
             <!-- Post /////-->
+            
+            
 
             <!--- \\\\\\\Post-->
-            <div class="card gedf-card my-2">
-                <div class="card-header">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="mr-2">
-                                <img class="rounded-circle" width="45" src="https://picsum.photos/50/50" alt="">
-                            </div>
-                            <div class="ml-2">
-                                <div class="h5 m-0">@{{ user.username }}</div>
-
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="card-body">
-
-                    <a class="card-link" href="#">
-                        <h5 class="card-title"> Beautiful </h5>
-
-                    </a>
-
-                    <p class="card-text">
-                        It was a pleasure to read about goodness, simple friendship, acceptance and hope. The drawings
-                        are beautiful too. I am going to find my fox, mole and horse now.
-                    </p>
-                </div>
-                <div class="card-footer">
-                    <a href="#" class="card-link"><i class="fa fa-gittip"></i> Like</a>
-                    <a href="#" class="card-link"><i class="fa fa-comment"></i> Comment</a>
-                    <a href="#" class="card-link"><i class="fa fa-mail-forward"></i> Share</a>
-
-                    <div class="dropdown show mx-2" style="display: inline-block;">
-                        <a class="fa fa-star" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false"> Rate </a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <a class="dropdown-item" href="#">1</a>
-                            <a class="dropdown-item" href="#">2</a>
-                            <a class="dropdown-item" href="#">3</a>
-                            <a class="dropdown-item" href="#">4</a>
-                            <a class="dropdown-item" href="#">5</a>
-                        </div>
-                    </div>
-
-
-                </div>
-            </div>
-            <!-- Post /////-->
-
-
-            <!--- \\\\\\\Post-->
-            <div class="card gedf-card my-2">
-                <div class="card-header">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="mr-2">
-                                <img class="rounded-circle" width="45" src="https://picsum.photos/50/50" alt="">
-                            </div>
-                            <div class="ml-2">
-                                <div class="h5 m-0">@Ragini</div>
-
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="card-body">
-                    <a class="card-link" href="#">
-                        <h5 class="card-title"> The Boy, the Mole, the Fox and the Horse = Bliss!</h5>
-                    </a>
-
-                    <p class="card-text">
-                        Charlie Mackesy's book is pure joy!! I read through it the day it arrived & I can already tell I
-                        will reread it over & over . . . hopefully, a few of those times will be with tea & cake. 😉
-                        While reading it, I go back & forth between wanting to be still & sit in the quiet and wanting
-                        to get my sketch book & create in a flurry with pen & paint!! Love this book SO many . . . it's
-                        bound to be a classic for both children & adults alike not only for his artistic ability; but
-                        because he writes truth that every heart knows but that we have all too often forgotten!
-
-                    </p>
-                </div>
-                <div class="card-footer">
-                    <a href="#" class="card-link"><i class="fa fa-gittip"></i> Like</a>
-                    <a href="#" class="card-link"><i class="fa fa-comment"></i> Comment</a>
-                    <a href="#" class="card-link"><i class="fa fa-mail-forward"></i> Share</a>
-
-                    <div class="dropdown show mx-2" style="display: inline-block;">
-                        <a class="fa fa-star" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false"> Rate </a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <a class="dropdown-item" href="#">1</a>
-                            <a class="dropdown-item" href="#">2</a>
-                            <a class="dropdown-item" href="#">3</a>
-                            <a class="dropdown-item" href="#">4</a>
-                            <a class="dropdown-item" href="#">5</a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <!-- Post /////-->
-
-
-            <!--- \\\\\\\Post-->
-            <div class="card gedf-card my-2">
-                <div class="card-header">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="mr-2">
-                                <img class="rounded-circle" width="45" src="https://picsum.photos/50/50" alt="">
-                            </div>
-                            <div class="ml-2">
-                                <div class="h5 m-0">@Anmol</div>
-
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="card-body">
-
-                    <a class="card-link" href="#">
-                        <h5 class="card-title"> So beautiful...</h5>
-                    </a>
-
-                    <p class="card-text">
-                        This book is beautiful. I highly recommend. I can open to any random page and find
-                        encouragement. Mr. Mackesy, may you become a household name.
-                    </p>
-                </div>
-                <div class="card-footer">
-                    <a href="#" class="card-link"><i class="fa fa-gittip"></i> Like</a>
-                    <a href="#" class="card-link"><i class="fa fa-comment"></i> Comment</a>
-                    <a href="#" class="card-link"><i class="fa fa-mail-forward"></i> Share</a>
-
-                    <div class="dropdown show mx-2" style="display: inline-block;">
-                        <a class="fa fa-star" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false"> Rate </a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <a class="dropdown-item" href="#">1</a>
-                            <a class="dropdown-item" href="#">2</a>
-                            <a class="dropdown-item" href="#">3</a>
-                            <a class="dropdown-item" href="#">4</a>
-                            <a class="dropdown-item" href="#">5</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Post /////-->
-
-
-
-        </div>
-        <div class="col-md-3">
-            <div class="card gedf-card">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
-                </div>
-            </div>
-            <div class="card gedf-card">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
-                </div>
-            </div>
-        </div>
+            
     </div>
 </div>
