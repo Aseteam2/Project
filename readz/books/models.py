@@ -9,6 +9,11 @@ class posts(models.Model):
 
 
 class user_collection(models.Model):
-    book_name = models.TextField(blank=True) 
-    photo = models.ImageField(upload_to='cars')
+    title = models.TextField(blank=True) 
+    image = models.ImageField(upload_to='images')
+
+    def __str__(self):
+        return self.title
+
+
     

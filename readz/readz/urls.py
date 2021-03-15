@@ -34,6 +34,10 @@ urlpatterns = [
    path('about/', views.about, name = 'about'),
    path('horror/', views.horror, name = 'horror'),
    path('index/', views.index, name = 'index'),
-   path('login/Collection/', views.collection, name = 'collection'),
+   path('login/userCollection/', views.book_upload_view, name = 'book upload'),
    
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL,
+                          document_root=settings.MEDIA_ROOT)

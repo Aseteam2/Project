@@ -17,7 +17,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEMPLATE_DIR=os.path.join(BASE_DIR,"template")
 STATIC_DIR=os.path.join(BASE_DIR,"static")
-MEDIA_DIR=os.path.join(BASE_DIR,"media")
+MEDIA_DIR=os.path.join(BASE_DIR,"media/")
 
 
 
@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'books',
     'crispy_forms',
+    'media',
+    
 ]
 CRISPY_TEMPLATE_PACK='bootstrap4'
 
@@ -133,10 +135,12 @@ EMAIL_HOST_PASSWORD='whydontwe8L'
 
 
 STATIC_URL ='/static/' 
-STATICFILES_DIRS=[
-    STATIC_DIR,
 
-
-]
 MEDIA_ROOT=MEDIA_DIR
 MEDIA_URL='/media/'
+
+STATICFILES_DIRS=[
+    STATIC_DIR,
+    MEDIA_DIR,
+
+]

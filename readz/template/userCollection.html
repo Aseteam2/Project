@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  {% load static %}
+  {% load media %}
+  {% load staticfiles %}
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ReadZ collection page</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"/>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&amp;display=swap"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&amp;display=swap" media="print" onload="this.media='all'"/>
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&amp;display=swap"/>
+    </noscript>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+        integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+    <noscript>
+      <style type="text/css">
+        [data-aos] {
+            opacity: 1 !important;
+            transform: translate(0) scale(1) !important;
+        }
+      </style>
+    </noscript>
+  </head>
+  <body id="top">
+    <header class="d-flex flex-column">
+      <div class="container pt-4">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent px-0"><a class="text-white navbar-brand" href="#yourcollections">READZ</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#da-navbarNav" aria-controls="da-navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse text-uppercase" id="da-navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item"><a class="nav-link smooth-scroll" href="#">Home</a></li>
+              <li class="nav-item"><a class="nav-link smooth-scroll" href="#">About</a></li>
+              <li class="nav-item"><a class="nav-link smooth-scroll" href="#">Logout</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div class="da-home-page-text flex-grow-1 d-flex align-items-center" data-aos="fade-right" data-aos-duration="1000">
+        <div class="container">
+          <div class="col-md-10 col-sm-12 px-0 mx-0">
+            <h2 class="display-3 text-uppercase">READZ</h2>
+            <h3 class="h4 mt-3">Your Favourite Collection Is Given Below</h3><a class="smooth-scroll btn btn-outline-light mt-4" href="#collections">View Collections</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="page-content">
+    
+<div class="da-section" id="collections">
+  <div class="container">
+    <div class="h3 text-center" data-aos="fade-up">Your Collection</div>
+  </div>
+  <div class="da-team carousel slide py-5" id="da-carouselIndicator" data-ride="carousel" data-aos="zoom-in-up" data-aos-duration="1000">
+    <div class="container">
+      <ol class="carousel-indicators">
+        <li class="active" data-target="#da-carouselIndicator" data-slide-to="0"></li>
+        <li data-target="#da-carouselIndicator" data-slide-to="1"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row">
+          <div class="col-md-4">
+              <div class="card d-block mb-3"><img class="card-img-top" src="{%media "/images/1.PNG" %} " alt="image"/>
+                <div class="card-body text-center">
+                  <div class="h5">Mystery Books</div>
+                  <p class="text-muted">BOOK 1</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card d-block mb-3"><img class="card-img-top" src="{%static "/images/da-emp-2.jpg" %}"alt="image"/>
+                <div class="card-body text-center">
+                  <div class="h5">Horror Books</div>
+                  <p class="text-muted">BOOK 2</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card d-block mb-3"><img class="card-img-top" src="../static/images/da-emp-3.jpg" alt="image"/>
+                <div class="card-body text-center">
+                  <div class="h5">Adventure Books</div>
+                  <p class="text-muted">BOOK 3</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card d-block mb-3"><img class="card-img-top" src="../static/images/da-emp-4.jpg" alt="image"/>
+                <div class="card-body text-center">
+                  <div class="h5">Action Books</div>
+                  <p class="text-muted">BOOKS 4</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card d-block mb-3"><img class="card-img-top" src="../static/images/da-emp-1.jpg" alt="image"/>
+                <div class="card-body text-center">
+                  <div class="h5">Romantic Books</div>
+                  <p class="text-muted">BOOK 5</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card d-block mb-3"><img class="card-img-top" src="../static/images/da-emp-6.jpg" alt="image"/>
+                <div class="card-body text-center">
+                  <div class="h5">Biography Books</div>
+                  <p class="text-muted">BOOK 6</p>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+   
+    <footer class="bg-secondary da-section">
+      <div class="container text-white">
+        <div class="row">
+          <div class="col-md-5">
+            <div class="h2 mb-4">READZ</div>
+            <p class="mb-3">info@readz.com</p>
+            <p>+1 502-257-1157</p>
+          </div>
+          <div class="col-md-4">
+            <div class="h6 pb-2">Follow Us</div>
+            <ul>
+              <li class="mb-1"><a class="da-social-link" href="#"><i class="fab fa-twitter" aria-hidden="true"></i><span class="ml-2">Twitter</span></a></li>
+              <li class="mb-1"><a class="da-social-link" href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i><span class="ml-2">Facebook</span></a></li>
+              <li class="mb-1"><a class="da-social-link" href="#"><i class="fab fa-instagram" aria-hidden="true"></i><span class="ml-2">Instagram</span></a></li>
+              <li class="mb-1"><a class="da-social-link" href="#"><i class="fab fa-youtube" aria-hidden="true"></i><span class="ml-2">Youtube</span></a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <div class="h6 pb-4">Copyright</div>
+            <p class="pb-1">&copy; READZ. All rights reserved.</p>
+            <p>Design - <a class="credit" href="#services" target="_blank">READZ TEAM</a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div id="scrolltop">
+      <button class="btn btn-primary"><span class="icon"><i class="fas fa-angle-up fa-2x"></i></span></button>
+    </div>
+  </body>
+</html>
+

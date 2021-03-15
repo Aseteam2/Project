@@ -6,6 +6,8 @@ from django.core.validators import RegexValidator
 from django.contrib.auth.password_validation import NumericPasswordValidator
 from django.contrib.auth.password_validation import validate_password
 
+from .models import user_collection
+
 
 class UserForm(forms.ModelForm):
     password = forms.CharField(widget = forms.PasswordInput(), validators=[validate_password] )
@@ -30,3 +32,9 @@ class postform(forms.ModelForm):
     model = posts
     fields = ["Comment"]
     labels = {'Comment': "Comment"}
+
+
+class bookInputForm(forms.ModelForm):
+    class Meta:
+        model = user_collection
+        fields = ('title', 'image')
