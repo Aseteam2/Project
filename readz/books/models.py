@@ -6,6 +6,7 @@ from django.db import models
 
 class posts(models.Model):
     Comment = models.TextField(blank=True)
+<<<<<<< HEAD
 
 
 class user_collection(models.Model):
@@ -17,3 +18,6 @@ class user_collection(models.Model):
 
 
     
+=======
+    Name = models.CharField(max_length=1000, blank=True)
+>>>>>>> 45266788720e949fc56c763242d611f71c27f84c

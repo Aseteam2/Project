@@ -30,6 +30,7 @@ class UserForm(forms.ModelForm):
 class postform(forms.ModelForm):
   class Meta:
     model = posts
+<<<<<<< HEAD
     fields = ["Comment"]
     labels = {'Comment': "Comment"}
 
@@ -38,3 +39,7 @@ class bookInputForm(forms.ModelForm):
     class Meta:
         model = user_collection
         fields = ('title', 'image')
+=======
+    fields = ["Comment","Name"]
+    labels = {'Comment': "Comment",'Name':"Name"}
+>>>>>>> 45266788720e949fc56c763242d611f71c27f84c

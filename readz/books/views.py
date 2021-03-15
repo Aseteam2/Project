@@ -36,14 +36,19 @@ def post_page1(request):
       form = postform()
   return render(request, 'postPage.html', {'form': form}) 
 
-def post_page(request):
+def posts1(request):
     pos=posts.objects.all()
     
-    return render(request,"postPage.html",{'pos':pos})  
+    return render(request,"posts.html",{'pos':pos})  
 
 def about(request):
     dict1={}
     return render(request,"AboutUs.html",context=dict1)    
+
+
+def post_page(request):
+    dict1={}
+    return render(request,"postPage.html",context=dict1)    
 
 def profile_page(request):
     dict1={}
