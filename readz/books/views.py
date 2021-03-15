@@ -11,6 +11,7 @@ from django.http import HttpResponse
 from .forms import postform
 from django.views.generic import CreateView
 from books.models import posts
+from .models import user_collection
 
  
 
@@ -95,4 +96,9 @@ def register(request):
 
 
 
-    
+def collection(request):
+    # obj = user_collection.objects.get(id=0)
+    # print(obj.book_name + "hello world")
+    #context = { 'object': obj }
+
+    return render(request , 'Collection.html' )

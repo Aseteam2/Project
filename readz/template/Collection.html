@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-US">
+  {% load static %}
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,11 +12,16 @@
     <noscript>
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&amp;display=swap"/>
     </noscript>
-    <link href="../static/css/bootstrap.min.css?ver=1.2.0" rel="stylesheet">
-    <link href="../static/css/font-awesome/css/all.min.css?ver=1.2.0" rel="stylesheet">
-    <link href="../static/css/aos.css?ver=1.2.0" rel="stylesheet">
-    <link href="../static/css/ekko-lightbox.css?ver=1.2.0" rel="stylesheet">
-    <link href="../static/css/main.css?ver=1.2.0" rel="stylesheet">
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+        integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+    <link href="{%static " /css/bootstrap.min.css " %} " rel="stylesheet">
+    <link href="{%static " /css/font-awesome/css/all.min.css" %} " rel="stylesheet">
+    <link href="{%static " /css/aos.css" %} " rel="stylesheet">
+    <link href="{%static " /css/ekko-lightbox.css"  %} " rel="stylesheet">
+    <link href="{%static " /css/main.css" %} " rel="stylesheet">
     <noscript>
       <style type="text/css">
         [data-aos] {
@@ -64,7 +70,7 @@
         <div class="carousel-item active">
           <div class="row">
           <div class="col-md-4">
-              <div class="card d-block mb-3"><img class="card-img-top" src="../static/images/da-emp-5.jpg" alt="image"/>
+              <div class="card d-block mb-3"><img class="card-img-top" src="{%static "/images/da-emp-5.jpg" %} " alt="image"/>
                 <div class="card-body text-center">
                   <div class="h5">Mystery Books</div>
                   <p class="text-muted">BOOK 1</p>
@@ -72,7 +78,7 @@
               </div>
             </div>
             <div class="col-md-4">
-              <div class="card d-block mb-3"><img class="card-img-top" src="../static/images/da-emp-2.jpg" alt="image"/>
+              <div class="card d-block mb-3"><img class="card-img-top" src="{%static "/images/da-emp-2.jpg" %}"alt="image"/>
                 <div class="card-body text-center">
                   <div class="h5">Horror Books</div>
                   <p class="text-muted">BOOK 2</p>
@@ -122,54 +128,6 @@
     </div>
   </div>
 </div>
-
-<div class="da-section da-work bg-secondary" id="learn">
-  <div class="container">
-    <div class="h3 pb-3 text-center text-white" data-aos="fade-up">Why Use READZ?</div>
-    <p class="px-5 pb-5 text-center text-white" data-aos="fade-up">READZ is a social media application which provides a platform for sharing and reading books. The READZ provides following features.</p>
-    <div class="row">
-      <div class="col-md-4">
-        <div class="card mb-3" data-aos="flip-left">
-          <div class="card-body mt-4 mb-1 text-center"><i class="pb-3 text-primary fas fa-briefcase fa-3x"></i>
-            <div class="h4 pb-3">Experience</div>
-            <p>Our Team consist of five members, Till now our has completed six projects with 100% successful rate.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card mb-3" data-aos="zoom-in-up">
-          <div class="card-body mt-4 mb-1 text-center"><i class="pb-3 text-primary fas fa-sliders-h fa-3x"></i>
-            <div class="h4 pb-3">Flexibility</div>
-            <p>Our team is very flexible when it comes to designing. Our team has satisfied every single customer.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card mb-3" data-aos="flip-right">
-          <div class="card-body mt-4 mb-1 text-center"><i class="pb-3 text-primary fas fa-trophy fa-3x"></i>
-            <div class="h4 pb-3">Results</div>
-            <p>Our Team has delivered 100% complete result. Delivering satisfaction is our main goal.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-<div class="container da-gallery" id="gallery">
-  <div class="h3 pb-5 text-center" data-aos="fade-up">Photo Gallery</div>
-  <div class="card-columns">
-    <div class="card"><a href="../static/images/gallery-img-3.jpg" data-toggle="lightbox" data-gallery="da-gallery"><img class="img-fluid" src="../static/images/gallery-img-3.jpg" alt="Gallery Image 1"/></a></div>
-    <div class="card"><a href="../static/images/gallery-img-5.jpg" data-toggle="lightbox" data-gallery="da-gallery"><img class="img-fluid" src="../static/images/gallery-img-5.jpg" alt="Gallery Image 2"/></a></div>
-    <div class="card"><a href="../static/images/gallery-img-4.jpg" data-toggle="lightbox" data-gallery="da-gallery"><img class="img-fluid" src="../static/images/gallery-img-4.jpg" alt="Gallery Image 3"/></a></div>
-    <div class="card"><a href="../static/images/gallery-img-1.jpg" data-toggle="lightbox" data-gallery="da-gallery"><img class="img-fluid" src="../static/images/gallery-img-1.jpg" alt="Gallery Image 4"/></a></div>
-    <div class="card"><a href="../static/images/gallery-img-2.jpg" data-toggle="lightbox" data-gallery="da-gallery"><img class="img-fluid" src="../static/images/gallery-img-2.jpg" alt="Gallery Image 5"/></a></div>
-  </div>
-</div>
-
-
 
 </div></div>
     </div>
