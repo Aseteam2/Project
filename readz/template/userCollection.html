@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
   {% load static %}
-  {% load media %}
-  {% load staticfiles %}
+
 
   <head>
     <meta charset="UTF-8">
@@ -68,7 +67,7 @@
         <div class="carousel-item active">
           <div class="row">
           <div class="col-md-4">
-              <div class="card d-block mb-3"><img class="card-img-top" src="{%media "/images/1.PNG" %} " alt="image"/>
+              <div class="card d-block mb-3"><img class="card-img-top" src="{%static "/images/1.PNG" %} " alt="image"/>
                 <div class="card-body text-center">
                   <div class="h5">Mystery Books</div>
                   <p class="text-muted">BOOK 1</p>
@@ -83,48 +82,29 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
-              <div class="card d-block mb-3"><img class="card-img-top" src="../static/images/da-emp-3.jpg" alt="image"/>
-                <div class="card-body text-center">
-                  <div class="h5">Adventure Books</div>
-                  <p class="text-muted">BOOK 3</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="row">
-            <div class="col-md-4">
-              <div class="card d-block mb-3"><img class="card-img-top" src="../static/images/da-emp-4.jpg" alt="image"/>
-                <div class="card-body text-center">
-                  <div class="h5">Action Books</div>
-                  <p class="text-muted">BOOKS 4</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card d-block mb-3"><img class="card-img-top" src="../static/images/da-emp-1.jpg" alt="image"/>
-                <div class="card-body text-center">
-                  <div class="h5">Romantic Books</div>
-                  <p class="text-muted">BOOK 5</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card d-block mb-3"><img class="card-img-top" src="../static/images/da-emp-6.jpg" alt="image"/>
-                <div class="card-body text-center">
-                  <div class="h5">Biography Books</div>
-                  <p class="text-muted">BOOK 6</p>
-                </div>
-              </div>
-            </div>
+            {% if img_obj %}
+                <h3>Succesfully uploaded : {{img_obj.title}}</h3>
+                <img src="{{ img_obj.image.url}}" alt="connect" style="max-height:300px">
+            {% endif %}
+    
+
+
             
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
+
+<div id="upload book">
+  <form method="post" class="form-group" enctype="multipart/form-data">
+    {% csrf_token %}
+     {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Upload</button>
+  </form>
+  
+
 </div>
 
 </div>

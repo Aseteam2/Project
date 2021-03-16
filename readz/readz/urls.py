@@ -34,12 +34,8 @@ urlpatterns = [
    path('about/', views.about, name = 'about'),
    path('horror/', views.horror, name = 'horror'),
    path('index/', views.index, name = 'index'),
-<<<<<<< HEAD
    path('login/userCollection/', views.book_upload_view, name = 'book upload'),
-=======
-   path('posts1/', views.posts1, name = 'posts1'),
->>>>>>> 45266788720e949fc56c763242d611f71c27f84c
-   
+   path('posts1/', views.posts1, name = 'posts1'),   
 ]
 
 if settings.DEBUG:
