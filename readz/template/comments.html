@@ -56,9 +56,7 @@
                     <div class="h5">@ {{user.username}} </div>
 
 
-                    <div class="mt-3">
-                        <a href="/profile">View Profile</a>
-                    </div>
+                    
                 </div>
 
             </div>
@@ -95,13 +93,10 @@
                                     class="text-white" 
                                     style="text-decoration: none;">Library</a></div>
                         </div>
+                        
                         <div class="my-2 ">
                             <div class="btn btn-primary "><a href="#" class="text-white" 
-                                    style="text-decoration: none;">Reviews</a></div>
-                        </div>
-                        <div class="my-2 ">
-                            <div class="btn btn-primary "><a href="#" class="text-white" 
-                                    style="text-decoration: none;">Requests for Book Exchange</a></div>
+                                    style="text-decoration: none;">Book Exchange</a></div>
                         </div>
                     </div>
                 </div>
@@ -111,33 +106,7 @@
         <div class="col-md-6 gedf-main">
 
             <!--- \\\\\\\Post-->
-            <div class="card gedf-card">
-                
-                <div class="card-body">
-                    <div class="tab-content" id="myTabContent">
-                        <div class="tab-pane fade show active" id="posts" role="tabpanel" aria-labelledby="posts-tab">
-                            <div class="form-group">
-                                <label class="sr-only" for="message">post</label>
-                                
-                            </div>
-
-                        </div>
-                        <div class="tab-pane fade" id="images" role="tabpanel" aria-labelledby="images-tab">
-                            <div class="form-group">
-                                <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="customFile">
-                                    <label class="custom-file-label" for="customFile">Upload image</label>
-                                </div>
-                            </div>
-                            <div class="py-4"></div>
-                        </div>
-                    </div>
-                    <div class="btn-toolbar justify-content-between">
-                        
-
-                    </div>
-                </div>
-            </div>
+            
             <!-- Post /////-->
 
             <!--- \\\\\\\Post-->
@@ -149,7 +118,7 @@
                                 <img class="rounded-circle" width="45" src="https://picsum.photos/50/50" alt="">
                             </div>
                             <div class="ml-2">
-                                <div class="h5 m-0">@{{ user.username }}</div>
+                                <div class="h5 m-0">@{{ us.Name }}</div>
 
                             </div>
                         </div>
@@ -164,7 +133,7 @@
                     </a>
 
                     <p class="card-text">
-                        COMMENTS FROM DB!
+                        {{ us.Comment }}
                     </p>
                 </div>
                 <div class="card-footer">
@@ -191,97 +160,10 @@
 
 
             <!--- \\\\\\\Post-->
-            <div class="card gedf-card my-2">
-                <div class="card-header">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="mr-2">
-                                <img class="rounded-circle" width="45" src="https://picsum.photos/50/50" alt="">
-                            </div>
-                            <div class="ml-2">
-                                <div class="h5 m-0">@{{ user.username }}</div>
+            
+                
 
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="card-body">
-                    <a class="card-link" href="#">
-                        <h5 class="card-title"> COMMENTS FROM DB!</h5>
-                    </a>
-
-                    <p class="card-text">
-                       COMMENTS FROM DB!
-
-                    </p>
-                </div>
-                <div class="card-footer">
-                    <a href="#" class="card-link"><i class="fa fa-gittip"></i> Like</a>
-                    <a href="#" class="card-link"><i class="fa fa-comment"></i> Comment</a>
-                    <a href="#" class="card-link"><i class="fa fa-mail-forward"></i> Share</a>
-
-                    <div class="dropdown show mx-2" style="display: inline-block;">
-                        <a class="fa fa-star" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false"> Rate </a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <a class="dropdown-item" href="#">1</a>
-                            <a class="dropdown-item" href="#">2</a>
-                            <a class="dropdown-item" href="#">3</a>
-                            <a class="dropdown-item" href="#">4</a>
-                            <a class="dropdown-item" href="#">5</a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <!-- Post /////-->
-
-
-            <!--- \\\\\\\Post-->
-            <div class="card gedf-card my-2">
-                <div class="card-header">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="mr-2">
-                                <img class="rounded-circle" width="45" src="https://picsum.photos/50/50" alt="">
-                            </div>
-                            <div class="ml-2">
-                                <div class="h5 m-0">@{{ user.username }}</div>
-
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="card-body">
-
-                    <a class="card-link" href="#">
-                        <h5 class="card-title"> Comments from DB</h5>
-                    </a>
-
-                    <p class="card-text">
-                         COMMENTS FROM DB
-                    </p>
-                </div>
-                <div class="card-footer">
-                    <a href="#" class="card-link"><i class="fa fa-gittip"></i> Like</a>
-                    <a href="#" class="card-link"><i class="fa fa-comment"></i> Comment</a>
-                    <a href="#" class="card-link"><i class="fa fa-mail-forward"></i> Share</a>
-
-                    <div class="dropdown show mx-2" style="display: inline-block;">
-                        <a class="fa fa-star" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false"> Rate </a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <a class="dropdown-item" href="#">1</a>
-                            <a class="dropdown-item" href="#">2</a>
-                            <a class="dropdown-item" href="#">3</a>
-                            <a class="dropdown-item" href="#">4</a>
-                            <a class="dropdown-item" href="#">5</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                    
             <!-- Post /////-->
 
 
