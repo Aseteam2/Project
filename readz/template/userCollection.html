@@ -63,53 +63,23 @@
     
 <div class="da-section" id="collections">
   <div class="container">
-    <div class="h3 text-center" data-aos="fade-up">Your Collection</div>
+      <ul>
+      {% for book in books %} 
+       <li> {{book.title}}</li>
+       <img src="../media/{{book.image}}" width="400" height="500"> 
+      {% endfor %}
+    </ul>
   </div>
-  <div class="da-team carousel slide py-5" id="da-carouselIndicator" data-ride="carousel" data-aos="zoom-in-up" data-aos-duration="1000">
-    <div class="container">
-      <ol class="carousel-indicators">
-        <li class="active" data-target="#da-carouselIndicator" data-slide-to="0"></li>
-        <li data-target="#da-carouselIndicator" data-slide-to="1"></li>
-      </ol>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="row">
-          <div class="col-md-4">
-              <div class="card d-block mb-3"><img class="card-img-top" src="{%static "/images/1.PNG" %} " alt="image"/>
-                <div class="card-body text-center">
-                  <div class="h5">Mystery Books</div>
-                  <p class="text-muted">BOOK 1</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card d-block mb-3"><img class="card-img-top" src="{%static "/images/da-emp-2.jpg" %}"alt="image"/>
-                <div class="card-body text-center">
-                  <div class="h5">Horror Books</div>
-                  <p class="text-muted">BOOK 2</p>
-                </div>
-              </div>
-            </div>
-            {% if img_obj %}
-                <h3>Succesfully uploaded : {{img_obj.title}}</h3>
-                <img src="{{ img_obj.image.url}}" alt="connect" style="max-height:300px">
-            {% endif %}
-    
-
-
-            
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+ 
 </div>
 
 <div id="upload book">
-  <form method="post" class="form-group" enctype="multipart/form-data">
+  
+  <form method="post" class="w-25 mx-auto" enctype="multipart/form-data">
+    <h4 class="mb-3">Upload book.</h4>
     {% csrf_token %}
      {{ form.as_p }}
-    <button type="submit" class="btn btn-primary">Upload</button>
+    <button type="submit" class="btn btn-primary mb-5">Upload</button>
   </form>
   
 
