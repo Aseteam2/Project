@@ -39,6 +39,9 @@
             <li class="nav-item active">
                 <a class="nav-link" href="/logout">Logout <span class="sr-only">(current)</span></a>
             </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/post_page">Dashboard<span class="sr-only">(current)</span></a>
+            </li>
 
         </ul>
 </nav>
@@ -83,13 +86,13 @@
                     <div class="d-flex flex-column justify-content-space">
                         <div class="my-2">
                             <div class="btn btn-primary ">
-                                <a href="userCollection" class="text-white"  style="text-decoration: none;">
+                                <a href="/userCollection" class="text-white"  style="text-decoration: none;">
                                     My Collection
                                 </a>
                             </div>
                         </div>
                         <div class=" my-2">
-                            <div class="btn btn-primary "><a href="#" onclick="location.href='index.html';"
+                            <div class="btn btn-primary "><a href="/index" onclick="location.href='index.html';"
                                     class="text-white" 
                                     style="text-decoration: none;">Library</a></div>
                         </div>
@@ -113,12 +116,12 @@
                                     <fieldset class="form-group border p-3">
                                         <legend class="w-auto px-2">Create Post Here</legend>
                                         <div class="form-group">
-                                            <label for="Comment">Comment:</label>
+                                            <label for="Comment">What are you thinking?:</label>
                                             <input type="text" class="form-control Comment" id="Comment" placeholder="type..." name="Comment">
                                         </div>
                                         <div class="form-group">
                                             <label for="Name">Name:</label>
-                                            <input type="text" class="form-control Comment" id="name" placeholder="type..." name="name" >
+                                            <input type="text" class="form-control Comment" id="Name" placeholder="type..." name="Name" >
                                         </div>
                                     {% csrf_token %}
                                     

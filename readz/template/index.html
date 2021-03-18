@@ -1,5 +1,6 @@
     <!DOCTYPE html>
 <html lang="en">
+    {% load static %}
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -44,14 +45,12 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav ml-auto nav-menu-list">
-                    <li class="nav-item active">
-                      <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item active">
-                      <a class="nav-link" href="/about">About</a>
-                    </li>
+                    
                      <li class="nav-item active">
                                 <a class="nav-link" href="/logout">Logout <span class="sr-only">(current)</span></a>
+                            </li> 
+                    <li class="nav-item active">
+                                <a class="nav-link" href="/post_page">Dashboard <span class="sr-only">(current)</span></a>
                             </li> 
             
                   </ul>
@@ -91,21 +90,21 @@
                         <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
 
                             <a href="Travelbooklist.html">
-                            <img class="img-fluid" src="../static/images/pexels-suzy-hazelwood-1887609.jpg" alt="Romantic books"/>
+                            <img class="img-fluid" src="{%static "/images/pexels-suzy-hazelwood-1887609.jpg" %}" alt="Romantic books"/>
                             </a>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 mb-5">
                         <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
                             <a href="romancebookList.html">
-                            <img class="img-fluid" src="../static/images/pexels-polina-zimmerman-3747163.jpg" alt="Adventure books"/>
+                            <img class="img-fluid" src="{%static "/images/pexels-polina-zimmerman-3747163.jpg" %}" alt="Adventure books"/>
                             </a>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 mb-5">
                         <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3">
                             <a href="MysterybookList.html">
-                            <img class="img-fluid" src="../static/images/pexels-thought-catalog-904620.jpg" alt="Thrillerbooks"/>
+                            <img class="img-fluid" src="{%static "/images/pexels-thought-catalog-904620.jpg" %}" alt="Thrillerbooks"/>
                             </a>
                         </div>
                     </div>
@@ -114,23 +113,13 @@
                 
                     <div class="col-md-6 col-lg-4 mb-5">
                         <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
-                            <a href="horrorbookList.html">
-                            <img class="img-fluid" src="../static/images/pexels-suzy-hazelwood-1887609.jpg" alt="Romantic books"/>
+                            <a href="/horror">
+                            <img class="img-fluid" src="{%static "/images/pexels-suzy-hazelwood-1887609.jpg" %}" alt="Romantic books"/>
                             </a>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
-                            <a href="Travelbooklist.html">
-                            <img class="img-fluid" src="../static/images/pexels-polina-zimmerman-3747163.jpg" alt="Adventure books"/>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3">
-                            <img class="img-fluid" src="../static/images/pexels-thought-catalog-904620.jpg" alt="Thrillerbooks"/>
-                        </div>
-                    </div>
+                    
+                    
                 </div>
             </div>
         </section>

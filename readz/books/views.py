@@ -34,12 +34,12 @@ def post_page1(request):
       form.save()
   else:
       form = postform()
-  return render(request, 'postPage.html', {'form': form}) 
+  return render(request, 'comments.html', {'form': form}) 
 
-def posts1(request):
+def comments(request):
     pos=posts.objects.all()
     
-    return render(request,"posts.html",{'pos':pos})  
+    return render(request,"comments.html",{'pos':pos})  
 
 def about(request):
     dict1={}

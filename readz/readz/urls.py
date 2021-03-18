@@ -24,18 +24,19 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 urlpatterns = [
    path('books/', include('books.urls')),
    path('admin/', admin.site.urls),
-   path('', views.home, name = 'home'),
+   path('home/', views.home, name = 'home'),
    path('login/', views.usr_login, name = 'login'),
    path('register/', views.register, name = 'register'),
    path('post_page/', views.post_page, name = 'post_page'),
-   path('post_page1/', views.post_page1, name = 'post_page1'),
+   path('comments/', views.comments, name = 'comments'),
    path('profile/', views.profile_page, name = 'profile_page'),
    path('logout/', views.user_logout, name = 'user_logout'),
    path('about/', views.about, name = 'about'),
    path('horror/', views.horror, name = 'horror'),
    path('index/', views.index, name = 'index'),
-   path('login/userCollection/', views.book_upload_view, name = 'book upload'),
-   path('posts1/', views.posts1, name = 'posts1'),   
+   path('userCollection/', views.book_upload_view, name = 'book upload'),
+   path('post_page1/', views.post_page1, name = 'post_page1'),   
+   path('collection/', views.collection, name = 'collection'),
 ]
 
 if settings.DEBUG:

@@ -26,8 +26,7 @@ urlpatterns = [
    path('', views.about, name = 'about'),
    path('', views.horror, name = 'horror'),
    path('', views.index, name = 'index'),
-   path('', views.post_page1, name = 'post_page1'),
-   path('', views.posts1, name = 'posts1'),
+   
    
 
 ]
