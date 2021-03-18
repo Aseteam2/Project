@@ -36,6 +36,7 @@ urlpatterns = [
    path('mystery/', views.mystery, name = 'mystery books'),
    path('travel/', views.travel, name = 'travel books'),
    path('romance/', views.romance, name = 'romance books'),
+   path('ebook/', views.ebook, name = 'E book'),
    path('index/', views.index, name = 'index'),
    path('userCollection/', views.book_upload_view, name = 'book upload'),
    path('post_page1/', views.post_page1, name = 'post_page1'),   
