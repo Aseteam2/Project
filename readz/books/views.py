@@ -58,6 +58,17 @@ def horror(request):
     dict1={}
     return render(request,"HorrorbookList.html",context=dict1)    
 
+def mystery(request):
+    dict1 = {}
+    return render(request, "MysterybookList.html", context=dict1)
+
+def travel(request):
+    dict1 = {}
+    return render(request, "TravelbookList.html", context=dict1)
+
+def romance(request):
+    dict1 = {}
+    return render(request, "romancebookList.html", context=dict1)
 
 def user_logout(request):
     dict1={}
@@ -111,13 +122,18 @@ def collection(request):
 
 def book_upload_view(request):
     """Process images uploaded by users"""
+    userbooks = user_collection.objects.all()
+    print("hello1")
+    for book in userbooks:
+        print(book)
+    print(userbooks)
     if request.method == 'POST':
         form = bookInputForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
             # Get the current instance object to display in the template
             img_obj = form.instance
-            return render(request, 'userCollection.html', {'form': form, 'img_obj': img_obj})
+            return render(request, 'userCollection.html', {'form': form, 'img_obj': img_obj, 'books': userbooks})
     else:
         form = bookInputForm()
-    return render(request, 'userCollection.html', {'form': form})
+    return render(request, 'userCollection.html', {'form': form,  'books': userbooks})
