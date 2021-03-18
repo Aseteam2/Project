@@ -21,6 +21,10 @@ def home(request):
     dict1={}
     return render(request,"homepage.html",context=dict1)
 
+def exchange(request):
+    dict1={}
+    return render(request,"bookExchange.html",context=dict1)
+
 def index(request):
     dict1={}
     return render(request,"index.html",context=dict1)    

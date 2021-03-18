@@ -37,6 +37,7 @@ urlpatterns = [
    path('userCollection/', views.book_upload_view, name = 'book upload'),
    path('post_page1/', views.post_page1, name = 'post_page1'),   
    path('collection/', views.collection, name = 'collection'),
+   path('exchange/', views.exchange, name = 'exchange'),
 ]
 
 if settings.DEBUG:
