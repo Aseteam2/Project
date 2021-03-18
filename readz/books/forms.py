@@ -28,10 +28,12 @@ class UserForm(forms.ModelForm):
             )
 
 class postform(forms.ModelForm):
-  class Meta:
-    model = posts
-    fields = ["Comment","Name"]
-    labels = {'Comment': "Comment", 'Name':"Name"}
+    Comment=forms.CharField(max_length=500,widget=forms.Textarea(attrs={'class' : 'form-control'}))
+    Name=forms.CharField(max_length=100,widget=forms.HiddenInput(attrs={'class' : 'form-control'}))
+    class Meta:
+        model = posts
+        fields = ('Comment', 'Name')
+    
 
 
 class bookInputForm(forms.ModelForm):

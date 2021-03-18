@@ -32,13 +32,17 @@ def index(request):
 
    
 def post_page1(request):
+  form = postform()
+  form.initial['Name']=request.session['username']
   if request.method == "POST":
     form = postform(request.POST)
+    
     if form.is_valid():
       form.save()
+      print("saved")
   else:
       form = postform()
-  return render(request, 'comments.html', {'form': form}) 
+  return render(request, 'postPage.html', {'form': form}) 
 
 def comments(request):
     pos=posts.objects.all()

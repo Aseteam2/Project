@@ -5,7 +5,10 @@ from django.db import models
 
 class posts(models.Model):
     Comment = models.TextField(blank=True)
-    Name = models.TextField(max_length=100)
+    Name = models.TextField(blank=True)
+    def __str__(self):
+        return self.Name
+
 
 
 class user_collection(models.Model):

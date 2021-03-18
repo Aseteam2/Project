@@ -74,7 +74,7 @@
                 </div>
                 <div class="text-center">
                     <h3>
-                        {{ user.username }}<span class="font-weight-light">, 24</span>
+                        {{ user.username }}<span class="font-weight-light"></span>
                     </h3>
                     <div class="h5 font-weight-200">
                         <i class="ni location_pin mr-2"></i>Windsor, Canada.
@@ -85,21 +85,20 @@
                     <hr class="my-4">
                     <div class="d-flex flex-column justify-content-space">
                         <div class="my-2">
-                            <div class="btn btn-primary ">
+                            <div class="btn btn-success">
                                 <a href="/userCollection" class="text-white"  style="text-decoration: none;">
                                     My Collection
                                 </a>
                             </div>
                         </div>
                         <div class=" my-2">
-                            <div class="btn btn-primary "><a href="/index" onclick="location.href='index.html';"
-                                    class="text-white" 
-                                    style="text-decoration: none;">Library</a></div>
+                            <div class="btn btn-success"><a href="/index" class="text-white"  style="text-decoration: none;">
+                                    Library</a></div>
                         </div>
                         
                         
                         <div class="my-2 ">
-                            <div class="btn btn-primary "><a href="/exchange" class="text-white" 
+                            <div class="btn btn-success "><a href="/exchange" class="text-white" 
                                     style="text-decoration: none;">Book Exchange</a></div>
                         </div>
                     </div>
@@ -117,11 +116,11 @@
                                         <legend class="w-auto px-2">Create Post Here</legend>
                                         <div class="form-group">
                                             <label for="Comment">What are you thinking?:</label>
-                                            <input type="text" class="form-control Comment" id="Comment" placeholder="type..." name="Comment">
+                                            <input type="text" class="form-control" id="Comment" placeholder="type..." name="Comment">
                                         </div>
                                         <div class="form-group">
                                             <label for="Name">Name:</label>
-                                            <input type="text" class="form-control Comment" id="Name" placeholder="type..." name="Name" >
+                                            <input type="text" class="form-control" id="Name" placeholder="type..." name="Name" >
                                         </div>
                                     {% csrf_token %}
                                     
@@ -129,7 +128,7 @@
                                   </fieldset>
                                   <div class="form-group row text-right">
                         <div class="col">
-                            <button type="submit" class="btn btn-primary btn-customized">Submit</button>
+                            <button type="submit" class="btn btn-success btn-customized">Submit</button>
                         </div>
                     </div>
                                 </form>
