@@ -33,17 +33,19 @@ def index(request):
 
    
 def post_page1(request):
-  form = postform()
-  form.initial['Name']=request.session['username']
-  if request.method == "POST":
-    form = postform(request.POST)
-    
-    if form.is_valid():
-      form.save()
-      print("saved")
-  else:
-      form = postform()
-  return render(request, 'postPage.html', {'form': form}) 
+    form = postform()
+    if request.session.has_key('username'):
+       form.initial['Name']=request.session['username']
+    else:
+      print("not available")
+    if request.method == "POST":
+        form = postform(request.POST)
+        if form.is_valid():
+            form.save()
+            print("saved")
+        else:
+            form = postform()
+    return render(request, 'postPage.html', {'form': form}) 
 
 def comments(request):
     pos=posts.objects.all()
@@ -81,7 +83,7 @@ def romance(request):
 
 def ebook(request):
     try:
-        return FileResponse(open('D:/Project/readz/template/ebook.pdf', 'rb'), content_type='application/pdf')
+        return FileResponse(open('C:/Users/anmoldeep/Desktop/Project_new/readz/template/ebook.pdf', 'rb'), content_type='application/pdf')
     except FileNotFoundError:
         raise Http404('not found')
 
