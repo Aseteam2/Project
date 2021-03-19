@@ -47,10 +47,6 @@ def post_page1(request):
             form = postform()
     return render(request, 'postPage.html', {'form': form}) 
 
-def comments(request):
-    pos=posts.objects.all()
-    
-    return render(request,"comments.html",{'pos':pos})  
 
 def about(request):
     dict1={}
@@ -58,8 +54,8 @@ def about(request):
 
 
 def post_page(request):
-    dict1={}
-    return render(request,"postPage.html",context=dict1)    
+    pos = posts.objects.all()
+    return render(request,"postPage.html",{'pos':pos})    
 
 def profile_page(request):
     dict1={}
@@ -92,6 +88,7 @@ def user_logout(request):
     return render(request,"homepage.html",context=dict1)   
     
 def usr_login(request):
+    pos = posts.objects.all()
     if request.method=="POST":
         username=request.POST.get('username')
         password=request.POST.get('password')
@@ -99,7 +96,8 @@ def usr_login(request):
         if user:
             if user.is_active:
                 login(request,user)
-                args={'user':request.user}
+                args={'user':request.user,'pos':pos}
+                print("active")
                 return render(request,'postPage.html',args)
             else:
                 return HttpResponse("Account is not active")
