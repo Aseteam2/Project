@@ -71,6 +71,8 @@
                 </div>
             {% endfor %}
         {% endif %}
+        {{ user_form.first_name|as_crispy_field}}<br>
+        {{ user_form.last_name|as_crispy_field}}<br>
         {{ user_form.username|as_crispy_field}}<br>
         {{ user_form.email|as_crispy_field }}<br>
         {{ user_form.password|as_crispy_field }}<br>

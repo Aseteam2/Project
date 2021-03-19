@@ -13,9 +13,11 @@ class UserForm(forms.ModelForm):
     password = forms.CharField(widget = forms.PasswordInput(), validators=[validate_password] )
     confirm_password = forms.CharField(widget = forms.PasswordInput(), validators=[validate_password] )
     #email = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'Email'}))
+    first_name = forms.CharField()
+    last_name = forms.CharField()
     class Meta():
         model =User
-        fields =('username', 'email', 'password', 'confirm_password')
+        fields =('username','first_name','last_name','email', 'password', 'confirm_password')
 
     def clean(self):
         cleaned_data = super(UserForm, self).clean()
