@@ -60,12 +60,25 @@
       </div>
     </header>
     <div class="page-content">
+
+      <div class="container">
+        <div class="row">
+          <div class="col-sm">
+            {% for book in books %} 
+            {{book.title}}
+            <img src="../media/{{book.image}}" width="250" height="320"> 
+           {% endfor %}
+          </div>
+
+        </div>
+      </div>
     
 <div class="da-section" id="collections">
   <div class="container">
       <ul>
       {% for book in books %} 
        <li> {{book.title}}</li>
+       <li>../media/{{book.image}}</li>
        <img src="../media/{{book.image}}" width="250" height="320"> 
       {% endfor %}
     </ul>
