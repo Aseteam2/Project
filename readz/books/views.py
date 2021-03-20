@@ -33,19 +33,22 @@ def index(request):
 
    
 def post_page1(request):
+    pos = posts.objects.all()
     form = postform()
+    args={'form': form,'pos':pos}
     if request.session.has_key('username'):
        form.initial['Name']=request.session['username']
     else:
       print("not available")
     if request.method == "POST":
         form = postform(request.POST)
+        
         if form.is_valid():
             form.save()
             print("saved")
         else:
             form = postform()
-    return render(request, 'postPage.html', {'form': form}) 
+    return render(request, 'postPage.html', args) 
 
 
 def about(request):
