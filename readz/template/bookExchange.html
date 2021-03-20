@@ -61,28 +61,29 @@
       </div>
       <div class="col-md-5">
         <h2>BOOK EXCHANGE </h2>
+        <h2> {{request}} </h2>
       </div>
     </div>
-      <form action="">
+      <form action="." method="POST"> {% csrf_token %}
         <div class="row text-center">
           <div class="col-md-2">
             </div>
             
             <div class="col-md-5 pt-3 pb-3 " style="border:1px solid black ; border-radius:5% ">
               <br>
-            <select name="" id="" required class="form-control">
+            <select name="request_type" id="" required class="form-control">
               <option value="">Select request type</option>
               <option value="book_request">Request a Book</option>
               <option value="book_offer">Offer a Book</option>
             </select><br><br>
-            <input type="text"  placeholder="Requester's Name" required class="form-control" /><br><br>
-            <input type="text"  placeholder="Book Name" required class="form-control"><br><br>
-            <input type="email" placeholder="Email Address" required class="form-control"><br><br>
-            <input type="number"  placeholder="Phone" required class="form-control"><br><br>
-            <textarea placeholder="Postal Address" required class="form-control"></textarea><br><br>
+            <input type="text" name="requester_name" placeholder="Requester's Name" required class="form-control" /><br><br>
+            <input type="text"  name="book_name" placeholder="Book Name" required class="form-control"><br><br>
+            <input type="email" name="email" placeholder="Email Address" required class="form-control"><br><br>
+            <input type="number" name="phone" placeholder="Phone" required class="form-control"><br><br>
+            <textarea  name="address" placeholder="Postal Address" required class="form-control"></textarea><br><br>
             
               <button type="reset" class="btn btn-success">Reset</button>
-              <button type="submit" class="btn btn-success">Submit Request</button>
+              <button type="submit" class="btn btn-success" value="Save">Submit Request</button>
             </div>
           </div>
         </form>

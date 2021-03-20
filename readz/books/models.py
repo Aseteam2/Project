@@ -18,6 +18,15 @@ class user_collection(models.Model):
     def __str__(self):
         return self.title
 
+class book_exchange(models.Model):
+    request_type = models.TextField(blank=True)
+    requester_name = models.TextField(blank= True)
+    book_name = models.TextField(blank=True)
+    email = models.TextField(blank=True)
+    phone = models.TextField(blank=True)
+    address = models.TextField(blank=True)
+
+
 
     
 
