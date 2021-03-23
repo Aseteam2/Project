@@ -3,7 +3,6 @@ from django.shortcuts import render,redirect
 from books.forms import UserForm
 from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.models import User
-from django.core.mail import send_mail
 from django.conf import settings
 from . import forms
 from datetime import datetime
@@ -14,8 +13,10 @@ from books.models import posts
 from .models import user_collection
 from .forms import bookInputForm
 from django.http import FileResponse, Http404
+from .models import book_exchange
+from readz.settings import EMAIL_HOST_USER
+from django.core.mail import send_mail
 
- 
 
 # Create your views here.
 def home(request):
@@ -24,7 +25,24 @@ def home(request):
 
 def exchange(request):
     dict1={}
-    return render(request,"bookExchange.html",context=dict1)
+    if request.method == "POST":
+        print(request.POST)
+        request_type_in = request.POST.get('request_type')
+        requester_name_in = request.POST.get('requester_name')
+        book_name_in = request.POST.get('book_name')
+        email_in = request.POST.get('email')
+        phone_in = request.POST.get('phone')
+        address_in = request.POST.get('address')
+        # saving data to model
+        book_exchange.objects.create(request_type = request_type_in, requester_name= requester_name_in, book_name=book_name_in, email = email_in, phone=phone_in, address=address_in)
+
+        #sending conformation email
+        subject = "Request Conformation"
+        message = "Your request for book exchange named "+ book_name_in + " has been received and will soon be processed"
+        recepient = email_in
+        send_mail(subject, message, EMAIL_HOST_USER, [recepient], fail_silently=False)
+        return render(request,"bookExchange.html",{'request': 'Successful'})
+    return render(request,"bookExchange.html", {'request': ''})
 
 def index(request):
     dict1={}
@@ -50,11 +68,9 @@ def post_page1(request):
             form = postform()
     return render(request, 'postPage.html', args) 
 
-
 def about(request):
     dict1={}
     return render(request,"AboutUs.html",context=dict1)    
-
 
 def post_page(request):
     pos = posts.objects.all()
@@ -85,7 +101,7 @@ def ebook(request):
         return FileResponse(open('C:/Users/anmoldeep/Desktop/Project_new/readz/template/ebook.pdf', 'rb'), content_type='application/pdf')
     except FileNotFoundError:
         raise Http404('not found')
-
+    
 def user_logout(request):
     dict1={}
     return render(request,"homepage.html",context=dict1)   
