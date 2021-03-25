@@ -6,6 +6,7 @@ from django.db import models
 class posts(models.Model):
     Comment = models.TextField(blank=True)
     Name = models.TextField(blank=True)
+    likes = models.ManyToManyField(user, related_name='blog_post')
     def __str__(self):
         return self.Name
 
