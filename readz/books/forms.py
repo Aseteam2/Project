@@ -1,5 +1,6 @@
 from django import forms
 from .models import posts
+from .models import Comment
 from django.db import models
 from django.contrib.auth.models import User
 from django.core.validators import RegexValidator
@@ -30,11 +31,13 @@ class UserForm(forms.ModelForm):
             )
 
 class postform(forms.ModelForm):
+    Title=forms.CharField(max_length=500,widget=forms.TextInput(attrs={'class' : 'form-control'}))
     Comment=forms.CharField(max_length=500,widget=forms.Textarea(attrs={'class' : 'form-control'}))
     Name=forms.CharField(max_length=100,widget=forms.HiddenInput(attrs={'class' : 'form-control'}))
+
     class Meta:
         model = posts
-        fields = ('Comment', 'Name')
+        fields = ('Comment', 'Name', 'Title')
     
 
 
@@ -44,5 +47,12 @@ class bookInputForm(forms.ModelForm):
         model = user_collection
         fields = ('title', 'image')
 
- 
+class commentform(forms.ModelForm):
+    name = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'class' : 'form-control'}))
+    body = forms.CharField(max_length=100, widget=forms.Textarea(attrs={'class' : 'form-control'}))
+    class Meta:
+        model = Comment
+        fields = ('name','body')
+
+        
 

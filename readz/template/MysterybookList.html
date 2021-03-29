@@ -1,5 +1,5 @@
 <html>
-
+    {% load static %}
 <head>
     <link href="css\bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="icofont\icofont.min.css">
@@ -29,145 +29,37 @@
 
             </ul>
     </nav>
-    <div >
-        <div class="row  p-5 " style="background-image:url('images/1.jpg'); background-size:cover; ">
-            <div class="container">
-                <div class="row text-center">
-                    <div class="col-md-12 pb-4 ">
-                        <h1 class="color-app">Mystery Books</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="row p-5">
-               <div class="col-md-3 col-xs-12 col-sm-6  col-lg-2  col-xl-2  container text-center">
-                     <a href="/ebook" target="_blank">
-                        <img src="../static/images/GirlANovel.jpg" class="img-thumbnail" alt="Cinque Terre" width="304"
-                        height="236">
-                    </a>
-                    <div class="card-body">
-                        <h3><strong>Girl A Novel</strong></h3>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                    </div>
+    
+        <body style="background-image:url('{%static "images/1.jpg" %}'); background-size:cover; ">
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <h1>Mystery Books</h1>
                 </div>
                 
-                <div class="col-md-3 col-xs-12 col-sm-6  col-lg-2  col-xl-2  container text-center">
-                    <a href="/ebook" target="_blank">
-                        <img src="../static/images/Infinite.jpg" class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
-                    </a>
-                    <div class="card-body">
-                        <h3><strong>Infinite</strong></h3>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-xs-12 col-sm-6  col-lg-2  col-xl-2  container text-center">
-                    <a href="/ebook" target="_blank">
-                        <img src="../static/images/NotOneOfUs.jpg" class="img-thumbnail" alt="Cinque Terre" width="304"
-                        height="236">
-                    </a>
-                    <div class="card-body">
-                        <h3><strong>Not One Of Us</strong></h3>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-xs-12 col-sm-6  col-lg-2  col-xl-2  container text-center">
-                    <a href="/ebook" target="_blank">
-                        <img src="../static/images/TheBrokenGirls.jpg" class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
-                    </a>
-                    <div class="card-body">
-                        <h3><strong>The Broken Girls</strong></h3>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-xs-12 col-sm-6  col-lg-2  col-xl-2  container text-center">
-                    <a href="/ebook" target="_blank">
-                        <img src="../static/images/TheMoonlightChild.jpg" class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
-                    </a>
-                    <div class="card-body">
-                        <h3><strong>The Moonlight Child</strong></h3>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-xs-12 col-sm-6  col-lg-2  col-xl-2  container text-center">
-                    <a href="/ebook" target="_blank">
-                        <img src="../static/images/ThePerfectMarriage.jpg" class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
-                    </a>
-                    <div class="card-body">
-                        <h3><strong>The Perfect Marriage</strong></h3>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-xs-12 col-sm-6  col-lg-2  col-xl-2  container text-center">
-                    <a href="/ebook" target="_blank">
-                        <img src="../static/images/ThePush.jpg" class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
-                    </a>
-                    <div class="card-body">
-                        <h3><strong>The Push</strong></h3>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-xs-12 col-sm-6  col-lg-2  col-xl-2  container text-center">
-                    <a href="/ebook" target="_blank">
-                        <img src="../static/images/TheShadowBox.jpg" class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
-                    </a>
-                    <div class="card-body">
-                        <h3><strong>The Shadow Box</strong></h3>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-xs-12 col-sm-6  col-lg-2  col-xl-2  container text-center">
-                    <a href="/ebook" target="_blank">
-                        <img src="../static/images/TheSilentPatient.jpg" class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
-                    </a>
-                    <div class="card-body">
-                        <h3><strong>The Silent Patient</strong></h3>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-xs-12 col-sm-6  col-lg-2  col-xl-2  container text-center">
-                    <a href="/ebook" target="_blank">
-                        <img src="../static/images/TheStillwaterGirls.jpg" class="img-thumbnail" alt="Cinque Terre" width="304"
-                        height="236">
-                    </a>
-                    <div class="card-body">
-                        <h3><strong>The Still water Girls</strong></h3>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-xs-12 col-sm-6  col-lg-2  col-xl-2  container text-center">
-                    <a href="/ebook" target="_blank">
-                        <img src="../static/images/Verity.jpg" class="img-thumbnail" alt="Cinque Terre" width="304"
-                        height="236">
-                    </a>
-                    <div class="card-body">
-                        <h3><strong>Verity</strong></h3>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-xs-12 col-sm-6  col-lg-2  col-xl-2  container text-center">
-                    <a href="/ebook" target="_blank">
-                        <img src="../static/images/WhenWeBelievedinMermaids.jpg" class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
-                    </a>
-                    <div class="card-body">
-                        <h3><strong>When We Believed in Mermaids</strong></h3>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                    </div>
-                </div>
             </div>
-        </div>
-    </div>
+            <div class="row ">
+            {% for us in mys %}
+            {% if forloop.counter0|divisibleby:2 %}
+            </div><br>
+            <div class="row">
+                
+            {% endif %}
+            <div class="col-md-2"></div>
+            <div class="col-md-3 pt-3 pb-3">
+            <div class="card" style="width:18rem; height:16rem ;">
+            <img class="card-img-top" src="{{ us.image1.url }}" width="250" height="250" alt="not available">
+            <div class="card-body">
+            
+            </div>
+            </div>
+            <br><h4 class="text-center">{{ us.Name }}</h4> 
+            </div>
+            {% endfor %}
+            </div>
+        
+            
+            
+            
+            
 
 </html>

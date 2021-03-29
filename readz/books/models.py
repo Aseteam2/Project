@@ -1,14 +1,62 @@
 from django.db import models
-
+from django.contrib.auth.models import User
 
 # Create your models here.
 
 class posts(models.Model):
+
     Comment = models.TextField(blank=True)
     Name = models.TextField(blank=True)
-    likes = models.ManyToManyField(user, related_name='blog_post')
+    Title= models.TextField(blank=True)
+    likes = models.ManyToManyField(User, related_name='blog_post')
+    def __str__(self):
+        return self.Title
+
+class Comment(models.Model):
+    
+    name = models.CharField(max_length=255)
+    body=  models.TextField()
+    date_added = models.DateTimeField(auto_now_add=True)
+    
+    def __str__(self):
+        return '%s - %s' % (self.posts.Title, self.name)
+
+class romantic(models.Model):
+    book1_id = models.IntegerField()
+    Name= models.TextField(max_length=50)
+    
+    image1 = models.ImageField()
+
     def __str__(self):
         return self.Name
+
+class horror(models.Model):
+    book1_id = models.IntegerField()
+    Name= models.TextField(max_length=50)
+    
+    image1 = models.ImageField()
+
+    def __str__(self):
+        return self.Name
+
+class travel(models.Model):
+    book1_id = models.IntegerField()
+    Name= models.TextField(max_length=50)
+    
+    image1 = models.ImageField()
+
+    def __str__(self):
+        return self.Name
+
+class mystery(models.Model):
+    book1_id = models.IntegerField()
+    Name= models.TextField(max_length=50)
+   
+    image1 = models.ImageField()
+
+    def __str__(self):
+        return self.Name
+
 
 
 

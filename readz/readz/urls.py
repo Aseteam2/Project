@@ -16,9 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from books import views
+
 from django.conf import settings
 from django.contrib.staticfiles.urls import static
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from books.views import AddCommentView
 
 
 urlpatterns = [
@@ -31,16 +33,20 @@ urlpatterns = [
    path('profile/', views.profile_page, name = 'profile_page'),
    path('logout/', views.user_logout, name = 'user_logout'),
    path('about/', views.about, name = 'about'), 
-   path('horror/', views.horror, name = 'horror books'),
-   path('mystery/', views.mystery, name = 'mystery books'),
-   path('travel/', views.travel, name = 'travel books'),
-   path('romantic/', views.romance, name = 'romance books'),
+   path('horror/', views.horror1, name = 'horror books'),
+   path('mystery/', views.mystery1, name = 'mystery books'),
+   path('travel/', views.travel1, name = 'travel books'),
+   path('romantic/', views.romance1, name = 'romance books'),
    path('ebook/', views.ebook, name = 'E book'),
    path('index/', views.index, name = 'index'),
    path('userCollection/', views.book_upload_view, name = 'book upload'),
    path('post_page1/', views.post_page1, name = 'post_page1'),   
    path('collection/', views.collection, name = 'collection'),
    path('exchange/', views.exchange, name = 'exchange'),
+   path('like/<int:pk>', views.LikeView, name = 'like_post'),
+   path('add_comment/', AddCommentView.as_view(), name = 'add_comment'),
+
+
 ]
 
 if settings.DEBUG:

@@ -22,9 +22,11 @@
     <script defer src=" http s://use.fontawesome.com/releases/v5.0.13/js/solid.js"
         integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous">
         </script>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
-        integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
-        crossorigin="anonymous"></script>
+    
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v10.0" nonce="T0yg6vfB"></script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v10.0" nonce="kgxNDskC"></script>  
+    
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v10.0" nonce="nRV3cUnJ"></script>
 </head>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-success">
@@ -114,7 +116,12 @@
                                     <fieldset class="form-group border p-3">
                                         <h2>Create Post Here</h2>
                                         <div class="form-group">
-                                            <label for="Comment">What are you thinking?:</label>
+                                            <label for="Comment">Type the title of post:</label>
+                                            <div class="form-group">
+                                            
+                                                <input type="text" class="form-control" id="Title" placeholder="type..." name="Title"  >
+                                            </div>
+                                            <label for="Comment">What are you thinking?</label>
                                             <input type="text" class="form-control" id="Comment" placeholder="type..." name="Comment">
                                         </div>
                                         <div class="form-group">
@@ -147,13 +154,15 @@
                                 <img class="rounded-circle" width="45" src="https://picsum.photos/50/50" alt="">
                             </div>
                             <div class="ml-2">
-                                <div class="h5 m-0">@{{ us.Name }}</div>
+                                <div class="h5 m-0">@{{ us.Name}} <br> {{ us.Title }}</div>
 
                             </div>
+
                         </div>
                     </div>
 
                 </div>
+                
                 <div class="card-body">
 
                     <a class="card-link" href="#">
@@ -165,12 +174,14 @@
                         {{ us.Comment }}
                     </p>
                 </div>
+                <h2>Comments......</h2>
                 <div class="card-footer">
-                    <a href="#" class="card-link" class= text-success><i class="fa fa-gittip" class="text-success"></i> Like</a>
-                    <a href="#" class="card-link" class="text-success"><i class="fa fa-comment" class="text-success"></i> Comment</a>
-                    <a href="#" class="card-link" class="text-success"><i class="fa fa-mail-forward" class="text-success"></i> Share</a>
-
                     
+                    <div class="fb-like" data-href="http://127.0.0.1:8000/post_page/5" data-width="" data-layout="standard" data-action="like" data-size="small" data-share="true"></div>
+                    <div class="fb-share-button" data-href="http://http://127.0.0.1:8000/post_page/" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhttp%2F127.0.0.1%3A8000%2Fpost_page%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+                    <div class="fb-comments" data-href="http://127.0.0.1:8000/post_page/5" data-width="" data-numposts="5"></div>
+                    <br>
+                   
 
 
                 </div>

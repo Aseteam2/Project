@@ -1,5 +1,5 @@
 
-from django.shortcuts import render,redirect
+from django.shortcuts import render,redirect,get_object_or_404
 from books.forms import UserForm
 from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.models import User
@@ -12,10 +12,19 @@ from django.views.generic import CreateView
 from books.models import posts
 from .models import user_collection
 from .forms import bookInputForm
-from django.http import FileResponse, Http404
+from .forms import commentform
+from django.http import FileResponse, Http404, HttpResponseRedirect
 from .models import book_exchange
+from .models import Comment
+from .models import horror
+from .models import romantic
+from .models import mystery
+from .models import travel
 from readz.settings import EMAIL_HOST_USER
 from django.core.mail import send_mail
+from django.views.generic.edit import CreateView
+from django.views.generic import ListView
+from django.views.generic import DetailView
 
 
 # Create your views here.
@@ -80,21 +89,21 @@ def profile_page(request):
     dict1={}
     return render(request,"Profile.html",context=dict1)    
 
-def horror(request):
-    dict1={}
-    return render(request,"HorrorbookList.html",context=dict1)    
+def horror1(request):
+    hor = horror.objects.all()
+    return render(request,"HorrorbookList.html", {'hor': hor})    
 
-def mystery(request):
-    dict1 = {}
-    return render(request, "MysterybookList.html", context=dict1)
+def mystery1(request):
+    mys = mystery.objects.all()
+    return render(request, "MysterybookList.html",{'mys': mys })
 
-def travel(request):
-    dict1 = {}
-    return render(request, "TravelbookList.html", context=dict1)
+def travel1(request):
+    tr = travel.objects.all()
+    return render(request, "TravelbookList.html", {'tr':tr})
 
-def romance(request):
-    dict1 = {}
-    return render(request, "romancebookList.html", context=dict1)
+def romance1(request):
+    ro = romantic.objects.all()
+    return render(request, "romancebookList.html", {'ro':ro})
 
 def ebook(request):
     try:
@@ -165,3 +174,18 @@ def book_upload_view(request):
     else:
         form = bookInputForm()
     return render(request, 'userCollection.html', {'form': form,  'books': userbooks})
+
+
+def LikeView(request,pk):
+    post = get_object_or_404(posts,id=request.POST.get('post_id'))
+    post.likes.add(request,user)
+    return HttpResponseRedirect(reverse('article-detail',args=[str(pk)]))
+
+class AddCommentView(CreateView):
+    model=Comment
+    form_class = commentform
+    template_name= 'comments.html'
+
+
+    
+    
