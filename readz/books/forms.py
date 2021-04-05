@@ -2,12 +2,14 @@ from django import forms
 from .models import posts
 from .models import Comment
 from django.db import models
+from .models import user_collection
+
 from django.contrib.auth.models import User
 from django.core.validators import RegexValidator
 from django.contrib.auth.password_validation import NumericPasswordValidator
 from django.contrib.auth.password_validation import validate_password
 
-from .models import user_collection
+
 
 
 class UserForm(forms.ModelForm):
@@ -30,6 +32,13 @@ class UserForm(forms.ModelForm):
                 "password and confirm_password does not match"
             )
 
+class bookInputForm(forms.ModelForm):
+    title = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'class' : 'form-control'}))
+    class Meta:
+        model = user_collection
+        fields = ('title','image')
+
+
 class postform(forms.ModelForm):
     Title=forms.CharField(max_length=500,widget=forms.TextInput(attrs={'class' : 'form-control'}))
     Comment=forms.CharField(max_length=500,widget=forms.Textarea(attrs={'class' : 'form-control'}))
@@ -41,11 +50,7 @@ class postform(forms.ModelForm):
     
 
 
-class bookInputForm(forms.ModelForm):
-    title = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'class' : 'form-control'}))
-    class Meta:
-        model = user_collection
-        fields = ('title', 'image')
+
 
 class commentform(forms.ModelForm):
     name = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'class' : 'form-control'}))

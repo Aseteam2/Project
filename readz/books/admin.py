@@ -13,8 +13,9 @@ from books.models import mystery
 
 # Register your models here.
 admin.site.register(posts)
-
 admin.site.register(user_collection)
+
+
 admin.site.register(book_exchange)
 admin.site.register(Comment)
 admin.site.register(romantic)

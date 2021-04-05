@@ -21,6 +21,16 @@ class Comment(models.Model):
     def __str__(self):
         return '%s - %s' % (self.posts.Title, self.name)
 
+class user_collection(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE,related_name="user_collection1", null=True)
+    title = models.TextField(blank=True) 
+    image = models.ImageField(upload_to='images')
+
+    
+    def __str__(self):
+        self.title
+
+
 class romantic(models.Model):
     book1_id = models.IntegerField()
     Name= models.TextField(max_length=50)
@@ -60,12 +70,7 @@ class mystery(models.Model):
 
 
 
-class user_collection(models.Model):
-    title = models.TextField(blank=True) 
-    image = models.ImageField(upload_to='images')
 
-    def __str__(self):
-        return self.title
 
 class book_exchange(models.Model):
     request_type = models.TextField(blank=True)

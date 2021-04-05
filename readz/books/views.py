@@ -10,8 +10,8 @@ from django.http import HttpResponse
 from .forms import postform
 from django.views.generic import CreateView
 from books.models import posts
-from .models import user_collection
-from .forms import bookInputForm
+from books.models import user_collection
+from books.forms import bookInputForm
 from .forms import commentform
 from django.http import FileResponse, Http404, HttpResponseRedirect
 from .models import book_exchange
@@ -163,17 +163,7 @@ def collection(request):
 
     return render(request , 'Collection.html' )
 
-def book_upload_view(request):
-    """Process images uploaded by users"""
-    userbooks = user_collection.objects.all()
-    if request.method == 'POST':
-        form = bookInputForm(request.POST, request.FILES)
-        if form.is_valid():
-            form.save()
-            return render(request, 'userCollection.html', {'form': form, 'books': userbooks})
-    else:
-        form = bookInputForm()
-    return render(request, 'userCollection.html', {'form': form,  'books': userbooks})
+
 
 
 def LikeView(request,pk):
@@ -186,6 +176,17 @@ class AddCommentView(CreateView):
     form_class = commentform
     template_name= 'comments.html'
 
+def book_upload_view(request):
+    """Process images uploaded by users"""
+    userbooks = user_collection.objects.all()
+    if request.method == 'POST':
+        form = bookInputForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return render(request, 'userCollection.html', {'form': form, 'books': userbooks})
+    else:
+        form = bookInputForm()
+    return render(request, 'userCollection.html', {'form': form,  'books': userbooks})        
 
     
     

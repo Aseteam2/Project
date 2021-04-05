@@ -50,6 +50,7 @@
 
 
       </div>
+      <body style="background-image:url('{%static "images/1.jpg" %}'); background-size:cover; "></body>
       <div class="da-home-page-text flex-grow-1 d-flex align-items-center" data-aos="fade-right" data-aos-duration="1000">
         <div class="container">
           <div class="col-md-10 col-sm-12 px-0 mx-0">
@@ -59,32 +60,25 @@
         </div>
       </div>
     </header>
-    <div class="page-content">
-
-      <div class="container">
-        <div class="row">
-          <div class="col-sm">
-            {% for book in books %} 
-            {{book.title}}
-            <img src="../media/{{book.image}}" width="250" height="320"> 
-           {% endfor %}
-          </div>
-
-        </div>
+    <div class="row ">
+      {% for us in books %}
+      {% if forloop.counter0|divisibleby:2 %}
+      </div><br>
+      <div class="row">
+          
+      {% endif %}
+      <div class="col-md-2"></div>
+      <div class="col-md-3 pt-3 pb-3">
+      <div class="card" style="width:18rem; height:16rem ;">
+      <img class="card-img-top" src="{{ us.image.url }}" width="250" height="250" alt="not available">
+      <div class="card-body">
+      
       </div>
-    
-<div class="da-section" id="collections">
-  <div class="container">
-      <ul>
-      {% for book in books %} 
-       <li> {{book.title}}</li>
-       <li>../media/{{book.image}}</li>
-       <img src="../media/{{book.image}}" width="250" height="320"> 
+      </div>
+      <br><h4 class="text-center">{{ us.title }}</h4> 
+      </div>
       {% endfor %}
-    </ul>
-  </div>
- 
-</div>
+      </div>
 
 <div id="upload book">
   
