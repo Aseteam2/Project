@@ -28,6 +28,8 @@ from django.views.generic import DetailView
 
 
 # Create your views here.
+# Views are the function which perform an action for specific url. For instance, it defines which html page is to be opened after
+# entering url and what action is to be performed on the form or anything else included in that page.
 def home(request):
     dict1={}
     return render(request,"homepage.html",context=dict1)

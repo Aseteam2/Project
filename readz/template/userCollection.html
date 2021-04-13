@@ -61,6 +61,7 @@
       </div>
     </header>
     <div class="row ">
+      <!-- us variable from books model has fetched all rows to display from backend-->
       {% for us in books %}
       {% if forloop.counter0|divisibleby:2 %}
       </div><br>
@@ -84,6 +85,8 @@
   
   <form method="post" class="w-25 mx-auto" enctype="multipart/form-data">
     <h4 class="mb-3">Upload book.</h4>
+    
+    <!--- form to upload book from system-->
     {% csrf_token %}
      {{ form.as_p }}
     <button type="submit" class="btn btn-primary mb-5">Upload</button>

@@ -1,4 +1,4 @@
-
+<!-- dynamic page displaying books from backend of horror genre-->
     <html>
         {% load static %}
 <head>
@@ -48,6 +48,7 @@
                 
             </div>
             <div class="row ">
+                <!--- all rows from horror model are fetched in us and then displayed-->
             {% for us in hor %}
             {% if forloop.counter0|divisibleby:2 %}
             </div><br>

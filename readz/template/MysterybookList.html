@@ -1,4 +1,5 @@
-<html>
+<!-- dynamic page displaying books from backend of mystery genre-->
+    <html>
     {% load static %}
 <head>
     <link href="css\bootstrap.min.css" rel="stylesheet" />
@@ -23,9 +24,7 @@
                 </li>
                 
 
-                <!-- <li class="nav-item active">
-                    <a class="nav-link" href="login.html">Login / Signup <span class="sr-only">(current)</span></a>
-                </li> -->
+                
 
             </ul>
     </nav>
@@ -38,6 +37,7 @@
                 
             </div>
             <div class="row ">
+                <!--- all rows from mystery model are fetched in us and then displayed-->
             {% for us in mys %}
             {% if forloop.counter0|divisibleby:2 %}
             </div><br>

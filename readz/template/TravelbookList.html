@@ -1,3 +1,4 @@
+<!-- dynamic page displaying books from backend of travel genre-->
 <html>
     {% load static %}
 
@@ -24,10 +25,7 @@
                     <a class="nav-link" href="/index">Back to Library</a>
                 </li>
 
-                <!-- <li class="nav-item active">
-                    <a class="nav-link" href="login.html">Login / Signup <span class="sr-only">(current)</span></a>
-                </li> -->
-
+                
             </ul>
     </nav>
     <body style="background-image:url('{%static "images/1.jpg" %}'); background-size:cover; ">
@@ -40,6 +38,7 @@
                 
             </div>
             <div class="row ">
+                <!--- all rows from travel model are fetched in us and then displayed-->
             {% for us in tr %}
             {% if forloop.counter0|divisibleby:2 %}
             </div><br>

@@ -10,12 +10,12 @@ from django.contrib.auth.password_validation import NumericPasswordValidator
 from django.contrib.auth.password_validation import validate_password
 
 
-
+# this file manages all the forms used in project. It is used for defining the forms
 
 class UserForm(forms.ModelForm):
     password = forms.CharField(widget = forms.PasswordInput(), validators=[validate_password] )
     confirm_password = forms.CharField(widget = forms.PasswordInput(), validators=[validate_password] )
-    #email = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'Email'}))
+   
     first_name = forms.CharField()
     last_name = forms.CharField()
     class Meta():
